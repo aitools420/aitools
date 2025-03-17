@@ -3,11 +3,11 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="AI Tools - Top 3 tools per category to build the ultimate AI agent, with previews. Retro-futuristic, SEO-optimized guide.">
-    <meta name="keywords" content="AI tools, ultimate AI agent, full agents, NLP, code generation, image generation, data analysis, automation, speech, reasoning, web automation, assistants, video editing, writing, grammar, search, 2025">
+    <meta name="description" content="AI Tools - Best in class, free, and privacy-focused AI tools across Full Agents, AI Brains, Automation, and Code Generation. Modern, luxurious cyberpunk design.">
+    <meta name="keywords" content="AI tools, full agents, NLP, automation, code generation, best AI tools, free AI tools, privacy AI tools, 2025">
     <meta name="author" content="AI Tools Team">
-    <title>AI Tools - Top Tools for the Ultimate AI Agent</title>
-    <link href="https://fonts.googleapis.com/css2?family=Roboto+Mono:wght@700&family=VT323&display=swap" rel="stylesheet">
+    <title>AI Tools - Elite AI Solutions for 2025</title>
+    <link href="https://fonts.googleapis.com/css2?family=Space+Mono:wght@400;700&family=Orbitron:wght@700&display=swap" rel="stylesheet">
     <style>
         * {
             margin: 0;
@@ -15,95 +15,145 @@
             box-sizing: border-box;
         }
         body {
-            background: #0a0a1f;
+            background: linear-gradient(135deg, #0a0a1f 0%, #1c1c3b 100%);
             color: #fff;
             line-height: 1.6;
-            padding: 20px;
-            font-family: 'VT323', monospace; /* Retro body text */
+            padding: 40px;
+            font-family: 'Space Mono', monospace;
+            position: relative;
+            overflow-x: hidden;
+        }
+        body::before {
+            content: '';
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: repeating-linear-gradient(0deg, transparent, transparent 2px, rgba(255, 255, 255, 0.05) 2px, rgba(255, 255, 255, 0.05) 4px);
+            opacity: 0.1;
+            z-index: -1;
         }
         .container {
-            max-width: 1200px;
+            max-width: 1400px;
+            margin: 0 auto;
+        }
+        .mission {
+            text-align: center;
+            margin-bottom: 60px;
+            padding: 30px;
+            background: rgba(255, 255, 255, 0.05);
+            border-radius: 15px;
+            box-shadow: 0 0 20px rgba(0, 212, 255, 0.3);
+            backdrop-filter: blur(10px);
+        }
+        .mission h1 {
+            font-family: 'Orbitron', sans-serif;
+            font-size: 2.8em;
+            color: #00d4ff;
+            margin-bottom: 20px;
+            text-shadow: 0 0 10px #00d4ff;
+            animation: glitch 2s linear infinite;
+        }
+        .mission p {
+            font-size: 1.2em;
+            color: #ccc;
+            max-width: 800px;
             margin: 0 auto;
         }
         .news {
-            background: #8a2be2;
+            background: linear-gradient(45deg, #8a2be2, #ff69b4);
             padding: 20px;
             border-radius: 10px;
-            margin-bottom: 40px;
+            margin-bottom: 30px;
             box-shadow: 0 0 15px #8a2be2;
         }
-        .news h1 {
-            font-size: 1.8em; /* Slightly larger for boldness */
+        .news h3 {
+            font-family: 'Orbitron', sans-serif;
+            font-size: 1.6em;
             color: #00d4ff;
             margin-bottom: 10px;
-            font-family: 'Roboto Mono', monospace; /* Retro hacker headings */
-            font-weight: 700;
+            text-shadow: 0 0 5px #00d4ff;
+        }
+        .news p {
+            font-size: 1.1em;
+            color: #fff;
         }
         .news a {
-            color: #ff69b4;
+            color: #39ff14;
             text-decoration: none;
         }
         .news a:hover {
             text-decoration: underline;
         }
         .category {
-            margin-bottom: 40px;
+            margin-bottom: 60px;
         }
         .category h2 {
-            font-size: 2em; /* Bigger for impact */
+            font-family: 'Orbitron', sans-serif;
+            font-size: 2.4em;
             color: #00d4ff;
-            margin-bottom: 10px;
+            margin-bottom: 15px;
             text-align: center;
-            font-family: 'Roboto Mono', monospace;
-            font-weight: 700;
+            text-shadow: 0 0 10px #00d4ff;
+            animation: glitch 2s linear infinite;
         }
         .category .desc {
-            font-size: 1.1em; /* Slightly larger for readability */
+            font-size: 1.2em;
             color: #ccc;
             text-align: center;
-            margin-bottom: 20px;
+            margin-bottom: 30px;
         }
         .tools-grid {
             display: grid;
             grid-template-columns: repeat(3, 1fr);
-            gap: 20px;
+            gap: 30px;
         }
         .tool-box {
-            background: #1c1c3b;
-            padding: 20px;
+            background: rgba(255, 255, 255, 0.05);
+            padding: 25px;
             border-radius: 15px;
-            box-shadow: 0 0 10px #00d4ff;
-            transition: transform 0.3s;
+            box-shadow: 0 0 15px rgba(0, 212, 255, 0.5);
+            backdrop-filter: blur(10px);
+            transition: all 0.3s ease;
             text-align: center;
+            border: 1px solid #00d4ff;
         }
         .tool-box:hover {
-            transform: scale(1.05);
-            box-shadow: 0 0 20px #00d4ff;
+            transform: translateY(-5px);
+            box-shadow: 0 0 25px #00d4ff, 0 0 40px #8a2be2;
         }
-        .tool-box img {
+        /* Placeholder for future image previews */
+        .tool-box .preview-placeholder {
             width: 100%;
             max-width: 200px;
-            height: auto;
+            height: 150px;
+            background: #1c1c3b;
             border-radius: 10px;
-            margin-bottom: 10px;
+            margin: 0 auto 15px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: #ccc;
+            font-size: 0.9em;
         }
         .tool-box h3 {
             color: #00d4ff;
-            font-size: 1.4em; /* Bolder headings */
+            font-family: 'Orbitron', sans-serif;
+            font-size: 1.6em;
             margin-bottom: 10px;
-            font-family: 'Roboto Mono', monospace;
-            font-weight: 700;
+            text-shadow: 0 0 5px #00d4ff;
         }
         .tool-box p {
-            font-size: 1em; /* Slightly larger for retro vibe */
+            font-size: 1.1em;
             color: #fff;
             margin-bottom: 5px;
         }
         .tool-box .payment {
-            color: #39ff14; /* Neon grass green */
+            color: #39ff14;
         }
         .tool-box .location {
-            color: #8a2be2; /* Purple */
+            color: #8a2be2;
         }
         .tool-box a {
             color: #ff69b4;
@@ -111,6 +161,11 @@
         }
         .tool-box a:hover {
             color: #ff85c9;
+        }
+        @keyframes glitch {
+            2%, 64% { transform: translate(2px, 0) skew(0deg); }
+            4%, 60% { transform: translate(-2px, 0) skew(0deg); }
+            62% { transform: translate(0, 0) skew(5deg); }
         }
         @media (max-width: 900px) {
             .tools-grid {
@@ -121,81 +176,125 @@
             .tools-grid {
                 grid-template-columns: 1fr;
             }
-            .news h1 { font-size: 1.4em; }
-            .category h2 { font-size: 1.6em; }
-            .tool-box h3 { font-size: 1.2em; }
-            .tool-box img { max-width: 150px; }
+            .mission h1 { font-size: 2em; }
+            .category h2 { font-size: 1.8em; }
+            .tool-box h3 { font-size: 1.4em; }
         }
     </style>
 </head>
 <body>
     <div class="container">
-        <!-- News Section -->
-        <section class="news">
-            <h1>Latest AI Breakthrough: xAI’s Grok 3 Goes Multimodal!</h1>
-            <p>March 17, 2025: xAI dropped a bombshell—Grok 3, their latest AI agent, now handles text, images, and audio in one go, aiming to outsmart rivals with real-world reasoning. <a href="https://xai.company/news" target="_blank">Read more</a></p>
+        <!-- Mission Statement -->
+        <section class="mission">
+            <h1>Our Mission</h1>
+            <p>At AI Tools, we’re dedicated to finding and using the critical AI tools that keep you ahead as AI accelerates—empowering you with the best, free, and privacy-focused solutions for 2025 and beyond.</p>
         </section>
 
         <!-- Full Agents -->
         <section class="category">
             <h2>Full Agents</h2>
-            <p class="desc">Smart AIs that can think and act on their own, like digital helpers.</p>
+            <p class="desc">Autonomous AIs that act as digital assistants, executing tasks independently.</p>
+            <div class="news">
+                <h3>News: Manus Unveils Next-Gen Agent</h3>
+                <p>March 15, 2025: Manus announced its latest agent, capable of handling complex workflows with 40% faster execution. <a href="https://manus.ai/news" target="_blank">Read more</a></p>
+            </div>
             <div class="tools-grid">
                 <div class="tool-box">
-                    <img src="https://api.pagepeeker.com/v2/thumbs.php?size=s&url=https://xai.company" alt="Grok Preview">
-                    <h3>Grok</h3>
-                    <p>Fast, truth-seeking AI agent.</p>
-                    <p class="payment">Freemium</p>
-                    <p class="location">Cloud</p>
-                    <p><a href="https://xai.company" target="_blank">xAI</a></p>
-                </div>
-                <div class="tool-box">
-                    <img src="https://api.pagepeeker.com/v2/thumbs.php?size=s&url=https://manus.ai" alt="Manus Preview">
+                    <!-- Placeholder for future image previews -->
+                    <div class="preview-placeholder">Preview Coming Soon</div>
                     <h3>Manus</h3>
-                    <p>Task-executing AI powerhouse.</p>
+                    <p>Best in Class: Top-tier task execution.</p>
                     <p class="payment">Paid</p>
                     <p class="location">Cloud</p>
                     <p><a href="https://manus.ai" target="_blank">Manus</a></p>
                 </div>
                 <div class="tool-box">
-                    <img src="https://api.pagepeeker.com/v2/thumbs.php?size=s&url=https://openai.com" alt="Operator Preview">
-                    <h3>Operator</h3>
-                    <p>Computer-using AI assistant.</p>
-                    <p class="payment">Paid</p>
+                    <div class="preview-placeholder">Preview Coming Soon</div>
+                    <h3>Convergence</h3>
+                    <p>Free Alternative: Open-source agent.</p>
+                    <p class="payment">Free</p>
                     <p class="location">Cloud</p>
-                    <p><a href="https://openai.com" target="_blank">OpenAI</a></p>
+                    <p><a href="https://convergence.ai" target="_blank">Convergence</a></p>
+                </div>
+                <div class="tool-box">
+                    <div class="preview-placeholder">Preview Coming Soon</div>
+                    <h3>OpenManus</h3>
+                    <p>Privacy Local Option: Secure, local agent.</p>
+                    <p class="payment">Free</p>
+                    <p class="location">Local</p>
+                    <p><a href="https://openmanus.org" target="_blank">OpenManus</a></p>
                 </div>
             </div>
         </section>
 
-        <!-- NLP -->
+        <!-- AI Brains (NLP) -->
         <section class="category">
-            <h2>Natural Language Processing (NLP)</h2>
-            <p class="desc">How AI understands and talks like humans.</p>
+            <h2>AI Brains (NLP)</h2>
+            <p class="desc">Highly capable multi-modal LLMs for advanced reasoning and interaction.</p>
+            <div class="news">
+                <h3>News: Grok 3 Goes Multimodal!</h3>
+                <p>March 17, 2025: xAI’s Grok 3 now handles text, images, and audio, aiming to outsmart rivals. <a href="https://xai.company/news" target="_blank">Read more</a></p>
+            </div>
             <div class="tools-grid">
                 <div class="tool-box">
-                    <img src="https://api.pagepeeker.com/v2/thumbs.php?size=s&url=https://anthropic.com" alt="Claude Preview">
-                    <h3>Claude</h3>
-                    <p>Safe, helpful language AI.</p>
-                    <p class="payment">Paid</p>
-                    <p class="location">Cloud</p>
-                    <p><a href="https://anthropic.com" target="_blank">Anthropic</a></p>
-                </div>
-                <div class="tool-box">
-                    <img src="https://api.pagepeeker.com/v2/thumbs.php?size=s&url=https://openai.com" alt="ChatGPT Preview">
-                    <h3>ChatGPT</h3>
-                    <p>Top conversational AI.</p>
+                    <div class="preview-placeholder">Preview Coming Soon</div>
+                    <h3>Grok 3</h3>
+                    <p>Best in Class: Truth-seeking LLM.</p>
                     <p class="payment">Freemium</p>
                     <p class="location">Cloud</p>
-                    <p><a href="https://openai.com" target="_blank">OpenAI</a></p>
+                    <p><a href="https://xai.company" target="_blank">xAI</a></p>
                 </div>
                 <div class="tool-box">
-                    <img src="https://api.pagepeeker.com/v2/thumbs.php?size=s&url=https://ai.meta.com/llama/" alt="LLaMA Preview">
-                    <h3>LLaMA</h3>
-                    <p>Efficient open-source NLP.</p>
+                    <div class="preview-placeholder">Preview Coming Soon</div>
+                    <h3>Perplexity</h3>
+                    <p>Free Alternative: Smart answer finder.</p>
+                    <p class="payment">Freemium</p>
+                    <p class="location">Cloud</p>
+                    <p><a href="https://perplexity.ai" target="_blank">Perplexity</a></p>
+                </div>
+                <div class="tool-box">
+                    <div class="preview-placeholder">Preview Coming Soon</div>
+                    <h3>LM Studio</h3>
+                    <p>Privacy Local Option: Local LLM runner.</p>
                     <p class="payment">Free</p>
                     <p class="location">Local</p>
-                    <p><a href="https://ai.meta.com/llama/" target="_blank">Meta AI</a></p>
+                    <p><a href="https://lmstudio.ai" target="_blank">LM Studio</a></p>
+                </div>
+            </div>
+        </section>
+
+        <!-- Automation & Workflow -->
+        <section class="category">
+            <h2>Automation & Workflow</h2>
+            <p class="desc">Tools to automate tasks and streamline app integrations.</p>
+            <div class="news">
+                <h3>News: Zapier AI Boosts Integration</h3>
+                <p>March 16, 2025: Zapier AI now supports 10,000+ app integrations with AI-driven automation. <a href="https://zapier.com/blog" target="_blank">Read more</a></p>
+            </div>
+            <div class="tools-grid">
+                <div class="tool-box">
+                    <div class="preview-placeholder">Preview Coming Soon</div>
+                    <h3>Zapier AI</h3>
+                    <p>Best in Class: Seamless app linking.</p>
+                    <p class="payment">Freemium</p>
+                    <p class="location">Cloud</p>
+                    <p><a href="https://zapier.com" target="_blank">Zapier</a></p>
+                </div>
+                <div class="tool-box">
+                    <div class="preview-placeholder">Preview Coming Soon</div>
+                    <h3>N8N</h3>
+                    <p>Free Alternative: Open-source automation.</p>
+                    <p class="payment">Free</p>
+                    <p class="location">Both</p>
+                    <p><a href="https://n8n.io" target="_blank">N8N</a></p>
+                </div>
+                <div class="tool-box">
+                    <div class="preview-placeholder">Preview Coming Soon</div>
+                    <h3>LangChain</h3>
+                    <p>Privacy Local Option: Local workflows.</p>
+                    <p class="payment">Free</p>
+                    <p class="location">Local</p>
+                    <p><a href="https://langchain.com" target="_blank">LangChain</a></p>
                 </div>
             </div>
         </section>
@@ -203,383 +302,35 @@
         <!-- Code Generation -->
         <section class="category">
             <h2>Code Generation</h2>
-            <p class="desc">AI that writes computer programs for you.</p>
+            <p class="desc">AI tools that write and assist with coding projects.</p>
+            <div class="news">
+                <h3>News: GitHub Copilot X Released</h3>
+                <p>March 14, 2025: GitHub Copilot X introduces AI-driven debugging and multi-language support. <a href="https://github.com/features/copilot" target="_blank">Read more</a></p>
+            </div>
             <div class="tools-grid">
                 <div class="tool-box">
-                    <img src="https://api.pagepeeker.com/v2/thumbs.php?size=s&url=https://github.com/features/copilot" alt="Copilot Preview">
+                    <div class="preview-placeholder">Preview Coming Soon</div>
                     <h3>GitHub Copilot</h3>
-                    <p>Fast, accurate code writer.</p>
+                    <p>Best in Class: Accurate code writer.</p>
                     <p class="payment">Paid</p>
                     <p class="location">Cloud</p>
                     <p><a href="https://github.com/features/copilot" target="_blank">GitHub</a></p>
                 </div>
                 <div class="tool-box">
-                    <img src="https://api.pagepeeker.com/v2/thumbs.php?size=s&url=https://codeium.com" alt="Codeium Preview">
+                    <div class="preview-placeholder">Preview Coming Soon</div>
                     <h3>Codeium</h3>
-                    <p>Free, speedy coding help.</p>
+                    <p>Free Alternative: Speedy coding help.</p>
                     <p class="payment">Free</p>
                     <p class="location">Cloud</p>
                     <p><a href="https://codeium.com" target="_blank">Codeium</a></p>
                 </div>
                 <div class="tool-box">
-                    <img src="https://api.pagepeeker.com/v2/thumbs.php?size=s&url=https://tabnine.com" alt="Tabnine Preview">
+                    <div class="preview-placeholder">Preview Coming Soon</div>
                     <h3>Tabnine</h3>
-                    <p>Smart code completion.</p>
+                    <p>Privacy Local Option: Smart code completion.</p>
                     <p class="payment">Freemium</p>
                     <p class="location">Both</p>
                     <p><a href="https://tabnine.com" target="_blank">Tabnine</a></p>
-                </div>
-            </div>
-        </section>
-
-        <!-- Image Generation -->
-        <section class="category">
-            <h2>Image Generation</h2>
-            <p class="desc">AI that creates pictures from words.</p>
-            <div class="tools-grid">
-                <div class="tool-box">
-                    <img src="https://api.pagepeeker.com/v2/thumbs.php?size=s&url=https://midjourney.com" alt="Midjourney Preview">
-                    <h3>Midjourney</h3>
-                    <p>Stunning AI art maker.</p>
-                    <p class="payment">Paid</p>
-                    <p class="location">Cloud</p>
-                    <p><a href="https://midjourney.com" target="_blank">Midjourney</a></p>
-                </div>
-                <div class="tool-box">
-                    <img src="https://api.pagepeeker.com/v2/thumbs.php?size=s&url=https://openai.com" alt="DALL·E 3 Preview">
-                    <h3>DALL·E 3</h3>
-                    <p>Creative image generator.</p>
-                    <p class="payment">Freemium</p>
-                    <p class="location">Cloud</p>
-                    <p><a href="https://openai.com" target="_blank">OpenAI</a></p>
-                </div>
-                <div class="tool-box">
-                    <img src="https://api.pagepeeker.com/v2/thumbs.php?size=s&url=https://stability.ai" alt="Stable Diffusion Preview">
-                    <h3>Stable Diffusion</h3>
-                    <p>Free, powerful image AI.</p>
-                    <p class="payment">Free</p>
-                    <p class="location">Local</p>
-                    <p><a href="https://stability.ai" target="_blank">Stability AI</a></p>
-                </div>
-            </div>
-        </section>
-
-        <!-- Data Analysis -->
-        <section class="category">
-            <h2>Data Analysis</h2>
-            <p class="desc">AI that makes sense of numbers and info.</p>
-            <div class="tools-grid">
-                <div class="tool-box">
-                    <img src="https://api.pagepeeker.com/v2/thumbs.php?size=s&url=https://deepseek.com" alt="DeepSeek R1 Preview">
-                    <h3>DeepSeek R1</h3>
-                    <p>Advanced data cruncher.</p>
-                    <p class="payment">Paid</p>
-                    <p class="location">Cloud</p>
-                    <p><a href="https://deepseek.com" target="_blank">DeepSeek</a></p>
-                </div>
-                <div class="tool-box">
-                    <img src="https://api.pagepeeker.com/v2/thumbs.php?size=s&url=https://tableau.com" alt="Tableau AI Preview">
-                    <h3>Tableau AI</h3>
-                    <p>Visual data explorer.</p>
-                    <p class="payment">Paid</p>
-                    <p class="location">Cloud</p>
-                    <p><a href="https://tableau.com" target="_blank">Tableau</a></p>
-                </div>
-                <div class="tool-box">
-                    <img src="https://api.pagepeeker.com/v2/thumbs.php?size=s&url=https://julius.ai" alt="Julius AI Preview">
-                    <h3>Julius AI</h3>
-                    <p>Free data helper.</p>
-                    <p class="payment">Free</p>
-                    <p class="location">Cloud</p>
-                    <p><a href="https://julius.ai" target="_blank">Julius</a></p>
-                </div>
-            </div>
-        </section>
-
-        <!-- Automation/Workflow -->
-        <section class="category">
-            <h2>Automation/Workflow</h2>
-            <p class="desc">AI that automates tasks and connects apps.</p>
-            <div class="tools-grid">
-                <div class="tool-box">
-                    <img src="https://api.pagepeeker.com/v2/thumbs.php?size=s&url=https://zapier.com" alt="Zapier AI Preview">
-                    <h3>Zapier AI</h3>
-                    <p>Links thousands of apps.</p>
-                    <p class="payment">Freemium</p>
-                    <p class="location">Cloud</p>
-                    <p><a href="https://zapier.com" target="_blank">Zapier</a></p>
-                </div>
-                <div class="tool-box">
-                    <img src="https://api.pagepeeker.com/v2/thumbs.php?size=s&url=https://make.com" alt="Make Preview">
-                    <h3>Make</h3>
-                    <p>Strong workflow builder.</p>
-                    <p class="payment">Freemium</p>
-                    <p class="location">Cloud</p>
-                    <p><a href="https://make.com" target="_blank">Make</a></p>
-                </div>
-                <div class="tool-box">
-                    <img src="https://api.pagepeeker.com/v2/thumbs.php?size=s&url=https://n8n.io" alt="n8n Preview">
-                    <h3>n8n</h3>
-                    <p>Free automation tool.</p>
-                    <p class="payment">Free</p>
-                    <p class="location">Both</p>
-                    <p><a href="https://n8n.io" target="_blank">n8n</a></p>
-                </div>
-            </div>
-        </section>
-
-        <!-- Speech Generation -->
-        <section class="category">
-            <h2>Speech Generation</h2>
-            <p class="desc">AI that makes voices sound real.</p>
-            <div class="tools-grid">
-                <div class="tool-box">
-                    <img src="https://api.pagepeeker.com/v2/thumbs.php?size=s&url=https://elevenlabs.io" alt="ElevenLabs Preview">
-                    <h3>ElevenLabs</h3>
-                    <p>Lifelike AI voices.</p>
-                    <p class="payment">Freemium</p>
-                    <p class="location">Cloud</p>
-                    <p><a href="https://elevenlabs.io" target="_blank">ElevenLabs</a></p>
-                </div>
-                <div class="tool-box">
-                    <img src="https://api.pagepeeker.com/v2/thumbs.php?size=s&url=https://respeecher.com" alt="Respeecher Preview">
-                    <h3>Respeecher</h3>
-                    <p>Voice cloning pro.</p>
-                    <p class="payment">Paid</p>
-                    <p class="location">Cloud</p>
-                    <p><a href="https://respeecher.com" target="_blank">Respeecher</a></p>
-                </div>
-                <div class="tool-box">
-                    <img src="https://api.pagepeeker.com/v2/thumbs.php?size=s&url=https://wellsaidlabs.com" alt="WellSaid Labs Preview">
-                    <h3>WellSaid Labs</h3>
-                    <p>Studio-quality AI speech.</p>
-                    <p class="payment">Paid</p>
-                    <p class="location">Cloud</p>
-                    <p><a href="https://wellsaidlabs.com" target="_blank">WellSaid</a></p>
-                </div>
-            </div>
-        </section>
-
-        <!-- Reasoning -->
-        <section class="category">
-            <h2>Reasoning</h2>
-            <p class="desc">AI that thinks and solves problems.</p>
-            <div class="tools-grid">
-                <div class="tool-box">
-                    <img src="https://api.pagepeeker.com/v2/thumbs.php?size=s&url=https://deepmind.com" alt="AlphaCode Preview">
-                    <h3>DeepMind AlphaCode</h3>
-                    <p>Code problem solver.</p>
-                    <p class="payment">Paid</p>
-                    <p class="location">Cloud</p>
-                    <p><a href="https://deepmind.com" target="_blank">DeepMind</a></p>
-                </div>
-                <div class="tool-box">
-                    <img src="https://api.pagepeeker.com/v2/thumbs.php?size=s&url=https://perplexity.ai" alt="Perplexity Preview">
-                    <h3>Perplexity</h3>
-                    <p>Smart answer finder.</p>
-                    <p class="payment">Freemium</p>
-                    <p class="location">Cloud</p>
-                    <p><a href="https://perplexity.ai" target="_blank">Perplexity</a></p>
-                </div>
-                <div class="tool-box">
-                    <img src="https://api.pagepeeker.com/v2/thumbs.php?size=s&url=https://ibm.com/watson" alt="Watson Preview">
-                    <h3>Watson</h3>
-                    <p>IBM’s reasoning engine.</p>
-                    <p class="payment">Paid</p>
-                    <p class="location">Cloud</p>
-                    <p><a href="https://ibm.com/watson" target="_blank">IBM</a></p>
-                </div>
-            </div>
-        </section>
-
-        <!-- Web Automation -->
-        <section class="category">
-            <h2>Web Automation</h2>
-            <p class="desc">AI that controls web tasks automatically.</p>
-            <div class="tools-grid">
-                <div class="tool-box">
-                    <img src="https://api.pagepeeker.com/v2/thumbs.php?size=s&url=https://uipath.com" alt="UiPath Preview">
-                    <h3>UiPath</h3>
-                    <p>Pro web automation.</p>
-                    <p class="payment">Paid</p>
-                    <p class="location">Both</p>
-                    <p><a href="https://uipath.com" target="_blank">UiPath</a></p>
-                </div>
-                <div class="tool-box">
-                    <img src="https://api.pagepeeker.com/v2/thumbs.php?size=s&url=https://browserless.io" alt="Browserless Preview">
-                    <h3>Browserless</h3>
-                    <p>Headless browser tool.</p>
-                    <p class="payment">Freemium</p>
-                    <p class="location">Cloud</p>
-                    <p><a href="https://browserless.io" target="_blank">Browserless</a></p>
-                </div>
-                <div class="tool-box">
-                    <img src="https://api.pagepeeker.com/v2/thumbs.php?size=s&url=https://playwright.dev" alt="Playwright Preview">
-                    <h3>Playwright</h3>
-                    <p>Free web scripting.</p>
-                    <p class="payment">Free</p>
-                    <p class="location">Local</p>
-                    <p><a href="https://playwright.dev" target="_blank">Playwright</a></p>
-                </div>
-            </div>
-        </section>
-
-        <!-- AI Assistants -->
-        <section class="category">
-            <h2>AI Assistants</h2>
-            <p class="desc">Friendly AIs that chat and assist you.</p>
-            <div class="tools-grid">
-                <div class="tool-box">
-                    <img src="https://api.pagepeeker.com/v2/thumbs.php?size=s&url=https://bard.google.com" alt="Bard Preview">
-                    <h3>Bard</h3>
-                    <p>Google’s chat helper.</p>
-                    <p class="payment">Free</p>
-                    <p class="location">Cloud</p>
-                    <p><a href="https://bard.google.com" target="_blank">Google</a></p>
-                </div>
-                <div class="tool-box">
-                    <img src="https://api.pagepeeker.com/v2/thumbs.php?size=s&url=https://huggingface.co/chat" alt="Hugging Face Chat Preview">
-                    <h3>Hugging Face Chat</h3>
-                    <p>Open-source chat AI.</p>
-                    <p class="payment">Free</p>
-                    <p class="location">Cloud</p>
-                    <p><a href="https://huggingface.co/chat" target="_blank">Hugging Face</a></p>
-                </div>
-                <div class="tool-box">
-                    <img src="https://api.pagepeeker.com/v2/thumbs.php?size=s&url=https://heypi.com" alt="Pi Preview">
-                    <h3>Pi</h3>
-                    <p>Friendly personal AI.</p>
-                    <p class="payment">Free</p>
-                    <p class="location">Cloud</p>
-                    <p><a href="https://heypi.com" target="_blank">Inflection</a></p>
-                </div>
-            </div>
-        </section>
-
-        <!-- Video Editing -->
-        <section class="category">
-            <h2>Video Editing</h2>
-            <p class="desc">AI that makes and edits videos easily.</p>
-            <div class="tools-grid">
-                <div class="tool-box">
-                    <img src="https://api.pagepeeker.com/v2/thumbs.php?size=s&url=https://synthesia.io" alt="Synthesia Preview">
-                    <h3>Synthesia</h3>
-                    <p>AI video with avatars.</p>
-                    <p class="payment">Paid</p>
-                    <p class="location">Cloud</p>
-                    <p><a href="https://synthesia.io" target="_blank">Synthesia</a></p>
-                </div>
-                <div class="tool-box">
-                    <img src="https://api.pagepeeker.com/v2/thumbs.php?size=s&url=https://runwayml.com" alt="Runway Preview">
-                    <h3>Runway</h3>
-                    <p>Advanced video editor.</p>
-                    <p class="payment">Paid</p>
-                    <p class="location">Cloud</p>
-                    <p><a href="https://runwayml.com" target="_blank">Runway</a></p>
-                </div>
-                <div class="tool-box">
-                    <img src="https://api.pagepeeker.com/v2/thumbs.php?size=s&url=https://opus.pro" alt="OpusClip Preview">
-                    <h3>OpusClip</h3>
-                    <p>Quick video clip maker.</p>
-                    <p class="payment">Freemium</p>
-                    <p class="location">Cloud</p>
-                    <p><a href="https://opus.pro" target="_blank">OpusClip</a></p>
-                </div>
-            </div>
-        </section>
-
-        <!-- Writing -->
-        <section class="category">
-            <h2>Writing</h2>
-            <p class="desc">AI that writes text for you, like emails or stories.</p>
-            <div class="tools-grid">
-                <div class="tool-box">
-                    <img src="https://api.pagepeeker.com/v2/thumbs.php?size=s&url=https://rytr.me" alt="Rytr Preview">
-                    <h3>Rytr</h3>
-                    <p>Fast content creator.</p>
-                    <p class="payment">Freemium</p>
-                    <p class="location">Cloud</p>
-                    <p><a href="https://rytr.me" target="_blank">Rytr</a></p>
-                </div>
-                <div class="tool-box">
-                    <img src="https://api.pagepeeker.com/v2/thumbs.php?size=s&url=https://jasper.ai" alt="Jasper Preview">
-                    <h3>Jasper</h3>
-                    <p>SEO-friendly writer.</p>
-                    <p class="payment">Paid</p>
-                    <p class="location">Cloud</p>
-                    <p><a href="https://jasper.ai" target="_blank">Jasper</a></p>
-                </div>
-                <div class="tool-box">
-                    <img src="https://api.pagepeeker.com/v2/thumbs.php?size=s&url=https://copy.ai" alt="Copy.ai Preview">
-                    <h3>Copy.ai</h3>
-                    <p>Versatile copy tool.</p>
-                    <p class="payment">Freemium</p>
-                    <p class="location">Cloud</p>
-                    <p><a href="https://copy.ai" target="_blank">Copy.ai</a></p>
-                </div>
-            </div>
-        </section>
-
-        <!-- Grammar Improvement -->
-        <section class="category">
-            <h2>Grammar Improvement</h2>
-            <p class="desc">AI that fixes your writing mistakes.</p>
-            <div class="tools-grid">
-                <div class="tool-box">
-                    <img src="https://api.pagepeeker.com/v2/thumbs.php?size=s&url=https://grammarly.com" alt="Grammarly Preview">
-                    <h3>Grammarly</h3>
-                    <p>Best grammar checker.</p>
-                    <p class="payment">Freemium</p>
-                    <p class="location">Cloud</p>
-                    <p><a href="https://grammarly.com" target="_blank">Grammarly</a></p>
-                </div>
-                <div class="tool-box">
-                    <img src="https://api.pagepeeker.com/v2/thumbs.php?size=s&url=https://prowritingaid.com" alt="ProWritingAid Preview">
-                    <h3>ProWritingAid</h3>
-                    <p>Deep writing fixer.</p>
-                    <p class="payment">Paid</p>
-                    <p class="location">Both</p>
-                    <p><a href="https://prowritingaid.com" target="_blank">ProWritingAid</a></p>
-                </div>
-                <div class="tool-box">
-                    <img src="https://api.pagepeeker.com/v2/thumbs.php?size=s&url=https://quillbot.com" alt="QuillBot Preview">
-                    <h3>QuillBot</h3>
-                    <p>Paraphrasing and grammar.</p>
-                    <p class="payment">Freemium</p>
-                    <p class="location">Cloud</p>
-                    <p><a href="https://quillbot.com" target="_blank">QuillBot</a></p>
-                </div>
-            </div>
-        </section>
-
-        <!-- Search Engines -->
-        <section class="category">
-            <h2>Search Engines</h2>
-            <p class="desc">AI that finds answers online faster.</p>
-            <div class="tools-grid">
-                <div class="tool-box">
-                    <img src="https://api.pagepeeker.com/v2/thumbs.php?size=s&url=https://you.com" alt="You.com Preview">
-                    <h3>You.com</h3>
-                    <p>Private AI search.</p>
-                    <p class="payment">Freemium</p>
-                    <p class="location">Cloud</p>
-                    <p><a href="https://you.com" target="_blank">You.com</a></p>
-                </div>
-                <div class="tool-box">
-                    <img src="https://api.pagepeeker.com/v2/thumbs.php?size=s&url=https://kagi.com" alt="Kagi Preview">
-                    <h3>Kagi</h3>
-                    <p>Ad-free premium search.</p>
-                    <p class="payment">Paid</p>
-                    <p class="location">Cloud</p>
-                    <p><a href="https://kagi.com" target="_blank">Kagi</a></p>
-                </div>
-                <div class="tool-box">
-                    <img src="https://api.pagepeeker.com/v2/thumbs.php?size=s&url=https://andi.ai" alt="Andi Preview">
-                    <h3>Andi</h3>
-                    <p>Simple AI search.</p>
-                    <p class="payment">Free</p>
-                    <p class="location">Cloud</p>
-                    <p><a href="https://andi.ai" target="_blank">Andi</a></p>
                 </div>
             </div>
         </section>
