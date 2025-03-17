@@ -53,7 +53,7 @@
             color: #00d4ff;
             margin-bottom: 20px;
             text-shadow: 0 0 10px #00d4ff;
-            animation: glitch 2s linear infinite;
+            animation: pulseGlow 2s ease-in-out infinite;
         }
         .mission p {
             font-size: 1.2em;
@@ -96,7 +96,7 @@
             margin-bottom: 15px;
             text-align: center;
             text-shadow: 0 0 10px #00d4ff;
-            animation: glitch 2s linear infinite;
+            animation: pulseGlow 2s ease-in-out infinite;
         }
         .category .desc {
             font-size: 1.2em;
@@ -118,24 +118,12 @@
             transition: all 0.3s ease;
             text-align: center;
             border: 1px solid #00d4ff;
+            cursor: pointer;
+            position: relative;
         }
         .tool-box:hover {
             transform: translateY(-5px);
             box-shadow: 0 0 25px #00d4ff, 0 0 40px #8a2be2;
-        }
-        /* Placeholder for future image previews */
-        .tool-box .preview-placeholder {
-            width: 100%;
-            max-width: 200px;
-            height: 150px;
-            background: #1c1c3b;
-            border-radius: 10px;
-            margin: 0 auto 15px;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            color: #ccc;
-            font-size: 0.9em;
         }
         .tool-box h3 {
             color: #00d4ff;
@@ -149,6 +137,11 @@
             color: #fff;
             margin-bottom: 5px;
         }
+        .tool-box .category-label {
+            font-size: 1.1em;
+            margin-bottom: 15px;
+            font-weight: bold;
+        }
         .tool-box .payment {
             color: #39ff14;
         }
@@ -158,14 +151,31 @@
         .tool-box a {
             color: #ff69b4;
             text-decoration: underline;
+            pointer-events: none; /* Prevents link click independently */
         }
-        .tool-box a:hover {
+        .tool-box:hover a {
             color: #ff85c9;
         }
-        @keyframes glitch {
-            2%, 64% { transform: translate(2px, 0) skew(0deg); }
-            4%, 60% { transform: translate(-2px, 0) skew(0deg); }
-            62% { transform: translate(0, 0) skew(5deg); }
+        .donation {
+            text-align: center;
+            margin-top: 60px;
+            padding: 20px;
+            background: rgba(255, 255, 255, 0.05);
+            border-radius: 15px;
+            box-shadow: 0 0 20px rgba(0, 212, 255, 0.3);
+        }
+        .donation p {
+            font-size: 1.1em;
+            color: #ccc;
+        }
+        .donation span {
+            color: #39ff14;
+            word-break: break-all;
+        }
+        @keyframes pulseGlow {
+            0% { text-shadow: 0 0 10px #00d4ff; }
+            50% { text-shadow: 0 0 20px #00d4ff, 0 0 30px #00d4ff; }
+            100% { text-shadow: 0 0 10px #00d4ff; }
         }
         @media (max-width: 900px) {
             .tools-grid {
@@ -187,7 +197,7 @@
         <!-- Mission Statement -->
         <section class="mission">
             <h1>Our Mission</h1>
-            <p>At AI Tools, we’re dedicated to finding and using the critical AI tools that keep you ahead as AI accelerates—empowering you with the best, free, and privacy-focused solutions for 2025 and beyond.</p>
+            <p>At AI Tools, we’re dedicated to finding and using the critical AI tools that keep you ahead as AI accelerates — empowering you with the best, free, and privacy-focused solutions for 2025 and beyond.</p>
         </section>
 
         <!-- Full Agents -->
@@ -199,27 +209,30 @@
                 <p>March 15, 2025: Manus announced its latest agent, capable of handling complex workflows with 40% faster execution. <a href="https://manus.ai/news" target="_blank">Read more</a></p>
             </div>
             <div class="tools-grid">
-                <div class="tool-box">
+                <div class="tool-box" onclick="window.open('https://manus.ai', '_blank')">
                     <!-- Placeholder for future image previews -->
-                    <div class="preview-placeholder">Preview Coming Soon</div>
+                    <div class="preview-placeholder" style="display: none;">Preview Coming Soon</div>
+                    <p class="category-label">Best in Class</p>
                     <h3>Manus</h3>
-                    <p>Best in Class: Top-tier task execution.</p>
+                    <p>Top-tier task execution.</p>
                     <p class="payment">Paid</p>
                     <p class="location">Cloud</p>
                     <p><a href="https://manus.ai" target="_blank">Manus</a></p>
                 </div>
-                <div class="tool-box">
-                    <div class="preview-placeholder">Preview Coming Soon</div>
+                <div class="tool-box" onclick="window.open('https://convergence.ai', '_blank')">
+                    <div class="preview-placeholder" style="display: none;">Preview Coming Soon</div>
+                    <p class="category-label">Free Alternative</p>
                     <h3>Convergence</h3>
-                    <p>Free Alternative: Open-source agent.</p>
+                    <p>Open-source agent.</p>
                     <p class="payment">Free</p>
                     <p class="location">Cloud</p>
                     <p><a href="https://convergence.ai" target="_blank">Convergence</a></p>
                 </div>
-                <div class="tool-box">
-                    <div class="preview-placeholder">Preview Coming Soon</div>
+                <div class="tool-box" onclick="window.open('https://openmanus.org', '_blank')">
+                    <div class="preview-placeholder" style="display: none;">Preview Coming Soon</div>
+                    <p class="category-label">Privacy Local Option</p>
                     <h3>OpenManus</h3>
-                    <p>Privacy Local Option: Secure, local agent.</p>
+                    <p>Secure, local agent.</p>
                     <p class="payment">Free</p>
                     <p class="location">Local</p>
                     <p><a href="https://openmanus.org" target="_blank">OpenManus</a></p>
@@ -236,26 +249,29 @@
                 <p>March 17, 2025: xAI’s Grok 3 now handles text, images, and audio, aiming to outsmart rivals. <a href="https://xai.company/news" target="_blank">Read more</a></p>
             </div>
             <div class="tools-grid">
-                <div class="tool-box">
-                    <div class="preview-placeholder">Preview Coming Soon</div>
+                <div class="tool-box" onclick="window.open('https://xai.company', '_blank')">
+                    <div class="preview-placeholder" style="display: none;">Preview Coming Soon</div>
+                    <p class="category-label">Best in Class</p>
                     <h3>Grok 3</h3>
-                    <p>Best in Class: Truth-seeking LLM.</p>
+                    <p>Truth-seeking LLM.</p>
                     <p class="payment">Freemium</p>
                     <p class="location">Cloud</p>
                     <p><a href="https://xai.company" target="_blank">xAI</a></p>
                 </div>
-                <div class="tool-box">
-                    <div class="preview-placeholder">Preview Coming Soon</div>
+                <div class="tool-box" onclick="window.open('https://perplexity.ai', '_blank')">
+                    <div class="preview-placeholder" style="display: none;">Preview Coming Soon</div>
+                    <p class="category-label">Free Alternative</p>
                     <h3>Perplexity</h3>
-                    <p>Free Alternative: Smart answer finder.</p>
+                    <p>Smart answer finder.</p>
                     <p class="payment">Freemium</p>
                     <p class="location">Cloud</p>
                     <p><a href="https://perplexity.ai" target="_blank">Perplexity</a></p>
                 </div>
-                <div class="tool-box">
-                    <div class="preview-placeholder">Preview Coming Soon</div>
+                <div class="tool-box" onclick="window.open('https://lmstudio.ai', '_blank')">
+                    <div class="preview-placeholder" style="display: none;">Preview Coming Soon</div>
+                    <p class="category-label">Privacy Local Option</p>
                     <h3>LM Studio</h3>
-                    <p>Privacy Local Option: Local LLM runner.</p>
+                    <p>Local LLM runner.</p>
                     <p class="payment">Free</p>
                     <p class="location">Local</p>
                     <p><a href="https://lmstudio.ai" target="_blank">LM Studio</a></p>
@@ -272,26 +288,29 @@
                 <p>March 16, 2025: Zapier AI now supports 10,000+ app integrations with AI-driven automation. <a href="https://zapier.com/blog" target="_blank">Read more</a></p>
             </div>
             <div class="tools-grid">
-                <div class="tool-box">
-                    <div class="preview-placeholder">Preview Coming Soon</div>
+                <div class="tool-box" onclick="window.open('https://zapier.com', '_blank')">
+                    <div class="preview-placeholder" style="display: none;">Preview Coming Soon</div>
+                    <p class="category-label">Best in Class</p>
                     <h3>Zapier AI</h3>
-                    <p>Best in Class: Seamless app linking.</p>
+                    <p>Seamless app linking.</p>
                     <p class="payment">Freemium</p>
                     <p class="location">Cloud</p>
                     <p><a href="https://zapier.com" target="_blank">Zapier</a></p>
                 </div>
-                <div class="tool-box">
-                    <div class="preview-placeholder">Preview Coming Soon</div>
+                <div class="tool-box" onclick="window.open('https://n8n.io', '_blank')">
+                    <div class="preview-placeholder" style="display: none;">Preview Coming Soon</div>
+                    <p class="category-label">Free Alternative</p>
                     <h3>N8N</h3>
-                    <p>Free Alternative: Open-source automation.</p>
+                    <p>Open-source automation.</p>
                     <p class="payment">Free</p>
                     <p class="location">Both</p>
                     <p><a href="https://n8n.io" target="_blank">N8N</a></p>
                 </div>
-                <div class="tool-box">
-                    <div class="preview-placeholder">Preview Coming Soon</div>
+                <div class="tool-box" onclick="window.open('https://langchain.com', '_blank')">
+                    <div class="preview-placeholder" style="display: none;">Preview Coming Soon</div>
+                    <p class="category-label">Privacy Local Option</p>
                     <h3>LangChain</h3>
-                    <p>Privacy Local Option: Local workflows.</p>
+                    <p>Local workflows.</p>
                     <p class="payment">Free</p>
                     <p class="location">Local</p>
                     <p><a href="https://langchain.com" target="_blank">LangChain</a></p>
@@ -308,31 +327,39 @@
                 <p>March 14, 2025: GitHub Copilot X introduces AI-driven debugging and multi-language support. <a href="https://github.com/features/copilot" target="_blank">Read more</a></p>
             </div>
             <div class="tools-grid">
-                <div class="tool-box">
-                    <div class="preview-placeholder">Preview Coming Soon</div>
+                <div class="tool-box" onclick="window.open('https://github.com/features/copilot', '_blank')">
+                    <div class="preview-placeholder" style="display: none;">Preview Coming Soon</div>
+                    <p class="category-label">Best in Class</p>
                     <h3>GitHub Copilot</h3>
-                    <p>Best in Class: Accurate code writer.</p>
+                    <p>Accurate code writer.</p>
                     <p class="payment">Paid</p>
                     <p class="location">Cloud</p>
                     <p><a href="https://github.com/features/copilot" target="_blank">GitHub</a></p>
                 </div>
-                <div class="tool-box">
-                    <div class="preview-placeholder">Preview Coming Soon</div>
+                <div class="tool-box" onclick="window.open('https://codeium.com', '_blank')">
+                    <div class="preview-placeholder" style="display: none;">Preview Coming Soon</div>
+                    <p class="category-label">Free Alternative</p>
                     <h3>Codeium</h3>
-                    <p>Free Alternative: Speedy coding help.</p>
+                    <p>Speedy coding help.</p>
                     <p class="payment">Free</p>
                     <p class="location">Cloud</p>
                     <p><a href="https://codeium.com" target="_blank">Codeium</a></p>
                 </div>
-                <div class="tool-box">
-                    <div class="preview-placeholder">Preview Coming Soon</div>
+                <div class="tool-box" onclick="window.open('https://tabnine.com', '_blank')">
+                    <div class="preview-placeholder" style="display: none;">Preview Coming Soon</div>
+                    <p class="category-label">Privacy Local Option</p>
                     <h3>Tabnine</h3>
-                    <p>Privacy Local Option: Smart code completion.</p>
+                    <p>Smart code completion.</p>
                     <p class="payment">Freemium</p>
                     <p class="location">Both</p>
                     <p><a href="https://tabnine.com" target="_blank">Tabnine</a></p>
                 </div>
             </div>
+        </section>
+
+        <!-- Donation Section -->
+        <section class="donation">
+            <p>If you found this website useful, any EVM donations are welcome at: <br><span>0x2b716DC60D561EEDC7e1849D3B3e4DdC4271dc52</span></p>
         </section>
     </div>
 </body>
