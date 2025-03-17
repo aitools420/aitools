@@ -6,218 +6,67 @@
     <meta name="description" content="AI Tools - Best in class, free, and privacy-focused AI tools across Full Agents, AI Brains, Automation, and Code Generation. Modern, luxurious cyberpunk design.">
     <meta name="keywords" content="AI tools, full agents, NLP, automation, code generation, best AI tools, free AI tools, privacy AI tools, 2025">
     <meta name="author" content="AI Tools Team">
+    <meta name="robots" content="index, follow">
+    <!-- Open Graph Tags for Social Sharing -->
+    <meta property="og:title" content="AI Tools - Elite AI Solutions for 2025">
+    <meta property="og:description" content="Discover the best, free, and privacy-focused AI tools for 2025 with a modern cyberpunk design.">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://yourwebsite.com">
+    <meta property="og:image" content="https://yourwebsite.com/og-image.jpg">
     <title>AI Tools - Elite AI Solutions for 2025</title>
-    <link href="https://fonts.googleapis.com/css2?family=Space+Mono:wght@400;700&family=Orbitron:wght@700&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Space+Mono:wght@400;700&family=Orbitron:wght@700&display=swap" rel="stylesheet" async>
+    <!-- Schema Markup -->
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "WebPage",
+        "name": "AI Tools - Elite AI Solutions for 2025",
+        "description": "Best in class, free, and privacy-focused AI tools for 2025.",
+        "publisher": {
+            "@type": "Organization",
+            "name": "AI Tools Team"
+        }
+    }
+    </script>
     <style>
-        * {
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
-        }
-        body {
-            background: linear-gradient(135deg, #0a0a1f 0%, #1c1c3b 100%);
-            color: #fff;
-            line-height: 1.6;
-            padding: 40px;
-            font-family: 'Space Mono', monospace;
-            position: relative;
-            overflow-x: hidden;
-        }
-        body::before {
-            content: '';
-            position: fixed;
-            top: 0;
-            left: 0;
-            width: 100%;
-            height: 100%;
-            background: repeating-linear-gradient(0deg, transparent, transparent 2px, rgba(255, 255, 255, 0.05) 2px, rgba(255, 255, 255, 0.05) 4px);
-            opacity: 0.1;
-            z-index: -1;
-        }
-        .container {
-            max-width: 1400px;
-            margin: 0 auto;
-        }
-        .mission {
-            text-align: center;
-            margin-bottom: 60px;
-            padding: 30px;
-            background: rgba(255, 255, 255, 0.05);
-            border-radius: 15px;
-            box-shadow: 0 0 20px rgba(0, 212, 255, 0.3);
-            backdrop-filter: blur(10px);
-        }
-        .mission h1 {
-            font-family: 'Orbitron', sans-serif;
-            font-size: 2.8em;
-            color: #00d4ff;
-            margin-bottom: 20px;
-            text-shadow: 0 0 10px #00d4ff;
-            animation: pulseGlow 2s ease-in-out infinite;
-        }
-        .mission p {
-            font-size: 1.2em;
-            color: #ccc;
-            max-width: 800px;
-            margin: 0 auto;
-        }
-        .news {
-            background: linear-gradient(45deg, #8a2be2, #ff69b4);
-            padding: 20px;
-            border-radius: 10px;
-            margin-bottom: 30px;
-            box-shadow: 0 0 15px #8a2be2;
-        }
-        .news h3 {
-            font-family: 'Orbitron', sans-serif;
-            font-size: 1.6em;
-            color: #00d4ff;
-            margin-bottom: 10px;
-            text-shadow: 0 0 5px #00d4ff;
-        }
-        .news p {
-            font-size: 1.1em;
-            color: #fff;
-        }
-        .news a {
-            color: #39ff14;
-            text-decoration: none;
-        }
-        .news a:hover {
-            text-decoration: underline;
-        }
-        .category {
-            margin-bottom: 60px;
-        }
-        .category h2 {
-            font-family: 'Orbitron', sans-serif;
-            font-size: 2.4em;
-            color: #00d4ff;
-            margin-bottom: 15px;
-            text-align: center;
-            text-shadow: 0 0 10px #00d4ff;
-            animation: pulseGlow 2s ease-in-out infinite;
-        }
-        .category .desc {
-            font-size: 1.2em;
-            color: #ccc;
-            text-align: center;
-            margin-bottom: 30px;
-        }
-        .tools-grid {
-            display: grid;
-            grid-template-columns: repeat(3, 1fr);
-            gap: 30px;
-        }
-        .tool-box {
-            background: rgba(255, 255, 255, 0.05);
-            padding: 25px;
-            border-radius: 15px;
-            box-shadow: 0 0 15px rgba(0, 212, 255, 0.5);
-            backdrop-filter: blur(10px);
-            transition: all 0.3s ease;
-            text-align: center;
-            border: 1px solid #00d4ff;
-            cursor: pointer;
-            position: relative;
-        }
-        .tool-box:hover {
-            transform: translateY(-5px);
-            box-shadow: 0 0 25px #00d4ff, 0 0 40px #8a2be2;
-        }
-        .tool-box h3 {
-            color: #00d4ff;
-            font-family: 'Orbitron', sans-serif;
-            font-size: 1.6em;
-            margin-bottom: 10px;
-            text-shadow: 0 0 5px #00d4ff;
-        }
-        .tool-box p {
-            font-size: 1.1em;
-            color: #fff;
-            margin-bottom: 5px;
-        }
-        .tool-box .category-label {
-            font-size: 1.1em;
-            margin-bottom: 15px;
-            font-weight: bold;
-        }
-        .tool-box .payment {
-            color: #39ff14;
-        }
-        .tool-box .location {
-            color: #8a2be2;
-        }
-        .tool-box a {
-            color: #ff69b4;
-            text-decoration: underline;
-            pointer-events: none; /* Prevents link click independently */
-        }
-        .tool-box:hover a {
-            color: #ff85c9;
-        }
-        .donation {
-            text-align: center;
-            margin-top: 60px;
-            padding: 20px;
-            background: rgba(255, 255, 255, 0.05);
-            border-radius: 15px;
-            box-shadow: 0 0 20px rgba(0, 212, 255, 0.3);
-        }
-        .donation p {
-            font-size: 1.1em;
-            color: #ccc;
-        }
-        .donation span {
-            color: #39ff14;
-            word-break: break-all;
-        }
-        @keyframes pulseGlow {
-            0% { text-shadow: 0 0 10px #00d4ff; }
-            50% { text-shadow: 0 0 20px #00d4ff, 0 0 30px #00d4ff; }
-            100% { text-shadow: 0 0 10px #00d4ff; }
-        }
-        @media (max-width: 900px) {
-            .tools-grid {
-                grid-template-columns: repeat(2, 1fr);
-            }
-        }
-        @media (max-width: 600px) {
-            .tools-grid {
-                grid-template-columns: 1fr;
-            }
-            .mission h1 { font-size: 2em; }
-            .category h2 { font-size: 1.8em; }
-            .tool-box h3 { font-size: 1.4em; }
-        }
+        *,:after,:before{margin:0;padding:0;box-sizing:border-box}body{background:linear-gradient(135deg,#0a0a1f 0,#1c1c3b 100%);color:#fff;line-height:1.6;padding:40px;font-family:'Space Mono',monospace;position:relative;overflow-x:hidden}body:before{content:'';position:fixed;top:0;left:0;width:100%;height:100%;background:repeating-linear-gradient(0deg,transparent,transparent 2px,rgba(255,255,255,.05) 2px,rgba(255,255,255,.05) 4px);opacity:.1;z-index:-1}.container{max-width:1400px;margin:0 auto}header.mission{text-align:center;margin-bottom:60px;padding:30px;background:rgba(255,255,255,.05);border-radius:15px;box-shadow:0 0 20px rgba(0,212,255,.3);backdrop-filter:blur(10px)}header.mission h1{font-family:'Orbitron',sans-serif;font-size:2.8em;color:#00d4ff;margin-bottom:20px;text-shadow:0 0 10px #00d4ff;animation:pulseGlow 2s ease-in-out infinite}header.mission p{font-size:1.2em;color:#ccc;max-width:800px;margin:0 auto}nav{text-align:center;margin-bottom:40px}nav a{display:inline-block;margin:0 15px;color:#00d4ff;text-decoration:none;font-family:'Orbitron',sans-serif;font-size:1.2em;text-shadow:0 0 5px #00d4ff}nav a:hover{color:#39ff14}.news{background:linear-gradient(45deg,#8a2be2,#ff69b4);padding:20px;border-radius:10px;margin-bottom:30px;box-shadow:0 0 15px #8a2be2}.news h3{font-family:'Orbitron',sans-serif;font-size:1.6em;color:#00d4ff;margin-bottom:10px;text-shadow:0 0 5px #00d4ff}.news p{font-size:1.1em;color:#fff}.news a{color:#39ff14;text-decoration:none}.news a:hover{text-decoration:underline}.category{margin-bottom:60px}.category h2{font-family:'Orbitron',sans-serif;font-size:2.4em;color:#00d4ff;margin-bottom:15px;text-align:center;text-shadow:0 0 10px #00d4ff;animation:pulseGlow 2s ease-in-out infinite}.category .desc{font-size:1.2em;color:#ccc;text-align:center;margin-bottom:30px}.tools-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:30px}.tool-box{background:rgba(255,255,255,.05);padding:25px;border-radius:15px;box-shadow:0 0 15px rgba(0,212,255,.5);backdrop-filter:blur(10px);transition:all .3s ease;text-align:center;border:1px solid #00d4ff;cursor:pointer}.tool-box:hover{transform:translateY(-5px);box-shadow:0 0 25px #00d4ff,0 0 40px #8a2be2}.tool-box h3{color:#00d4ff;font-family:'Orbitron',sans-serif;font-size:1.6em;margin-bottom:10px;text-shadow:0 0 5px #00d4ff}.tool-box p{font-size:1.1em;color:#fff;margin-bottom:5px}.tool-box .category-label{font-size:1.1em;margin-bottom:15px;font-weight:700}.tool-box .payment{color:#39ff14}.tool-box .location{color:#8a2be2}.tool-box a{color:#ff69b4;text-decoration:underline;pointer-events:none}.tool-box:hover a{color:#ff85c9}footer.donation{text-align:center;margin-top:60px;padding:20px;background:rgba(255,255,255,.05);border-radius:15px;box-shadow:0 0 20px rgba(0,212,255,.3)}footer.donation p{font-size:1.1em;color:#ccc}footer.donation span{color:#39ff14;word-break:break-all}@keyframes pulseGlow{0%{text-shadow:0 0 10px #00d4ff}50%{text-shadow:0 0 20px #00d4ff,0 0 30px #00d4ff}100%{text-shadow:0 0 10px #00d4ff}}@media (max-width:900px){.tools-grid{grid-template-columns:repeat(2,1fr)}}@media (max-width:600px){.tools-grid{grid-template-columns:1fr}header.mission h1{font-size:2em}.category h2{font-size:1.8em}.tool-box h3{font-size:1.4em}}
     </style>
 </head>
 <body>
     <div class="container">
         <!-- Mission Statement -->
-        <section class="mission">
+        <header class="mission">
             <h1>Our Mission</h1>
-            <p>At AI Tools, we’re dedicated to finding and using the critical AI tools that keep you ahead as AI accelerates — empowering you with the best, free, and privacy-focused solutions for 2025 and beyond.</p>
-        </section>
+            <p>At AI Tools, we’re dedicated to finding and using the critical AI tools that keep you ahead as AI accelerates—empowering you with the best, free, and privacy-focused solutions for 2025 and beyond.</p>
+        </header>
+
+        <!-- Navigation -->
+        <nav>
+            <a href="#full-agents">Full Agents</a>
+            <a href="#ai-brains">AI Brains</a>
+            <a href="#automation">Automation</a>
+            <a href="#code-generation">Code Generation</a>
+        </nav>
 
         <!-- Full Agents -->
-        <section class="category">
+        <section class="category" id="full-agents">
             <h2>Full Agents</h2>
             <p class="desc">Autonomous AIs that act as digital assistants, executing tasks independently.</p>
             <div class="news">
                 <h3>News: Manus Unveils Next-Gen Agent</h3>
-                <p>March 15, 2025: Manus announced its latest agent, capable of handling complex workflows with 40% faster execution. <a href="https://manus.ai/news" target="_blank">Read more</a></p>
+                <p>March 15, 2025: Manus announced its latest agent, capable of handling complex workflows with 40% faster execution. <a href="https://manus.im/news" target="_blank">Read more</a></p>
             </div>
             <div class="tools-grid">
-                <div class="tool-box" onclick="window.open('https://manus.ai', '_blank')">
-                    <!-- Placeholder for future image previews -->
+                <div class="tool-box" onclick="window.open('https://manus.im', '_blank')">
                     <div class="preview-placeholder" style="display: none;">Preview Coming Soon</div>
                     <p class="category-label">Best in Class</p>
                     <h3>Manus</h3>
                     <p>Top-tier task execution.</p>
                     <p class="payment">Paid</p>
                     <p class="location">Cloud</p>
-                    <p><a href="https://manus.ai" target="_blank">Manus</a></p>
+                    <p><a href="https://manus.im" target="_blank">Manus</a></p>
                 </div>
                 <div class="tool-box" onclick="window.open('https://convergence.ai', '_blank')">
                     <div class="preview-placeholder" style="display: none;">Preview Coming Soon</div>
@@ -241,12 +90,12 @@
         </section>
 
         <!-- AI Brains (NLP) -->
-        <section class="category">
+        <section class="category" id="ai-brains">
             <h2>AI Brains (NLP)</h2>
             <p class="desc">Highly capable multi-modal LLMs for advanced reasoning and interaction.</p>
             <div class="news">
                 <h3>News: Grok 3 Goes Multimodal!</h3>
-                <p>March 17, 2025: xAI’s Grok 3 now handles text, images, and audio, aiming to outsmart rivals. <a href="https://xai.company/news" target="_blank">Read more</a></p>
+                <p>March 17, 2025: xAI’s Grok 3 now handles text, images, and audio, aiming to outsmart rivals. <a href="https://xai.company/news/grok-3-multimodal" target="_blank">Read more</a></p>
             </div>
             <div class="tools-grid">
                 <div class="tool-box" onclick="window.open('https://xai.company', '_blank')">
@@ -280,12 +129,12 @@
         </section>
 
         <!-- Automation & Workflow -->
-        <section class="category">
+        <section class="category" id="automation">
             <h2>Automation & Workflow</h2>
             <p class="desc">Tools to automate tasks and streamline app integrations.</p>
             <div class="news">
                 <h3>News: Zapier AI Boosts Integration</h3>
-                <p>March 16, 2025: Zapier AI now supports 10,000+ app integrations with AI-driven automation. <a href="https://zapier.com/blog" target="_blank">Read more</a></p>
+                <p>March 16, 2025: Zapier AI now supports 10,000+ app integrations with AI-driven automation. <a href="https://zapier.com/blog/zapier-ai-2025-update" target="_blank">Read more</a></p>
             </div>
             <div class="tools-grid">
                 <div class="tool-box" onclick="window.open('https://zapier.com', '_blank')">
@@ -319,12 +168,12 @@
         </section>
 
         <!-- Code Generation -->
-        <section class="category">
+        <section class="category" id="code-generation">
             <h2>Code Generation</h2>
             <p class="desc">AI tools that write and assist with coding projects.</p>
             <div class="news">
                 <h3>News: GitHub Copilot X Released</h3>
-                <p>March 14, 2025: GitHub Copilot X introduces AI-driven debugging and multi-language support. <a href="https://github.com/features/copilot" target="_blank">Read more</a></p>
+                <p>March 14, 2025: GitHub Copilot X introduces AI-driven debugging and multi-language support. <a href="https://github.blog/2025-03-14-copilot-x-release" target="_blank">Read more</a></p>
             </div>
             <div class="tools-grid">
                 <div class="tool-box" onclick="window.open('https://github.com/features/copilot', '_blank')">
@@ -358,9 +207,9 @@
         </section>
 
         <!-- Donation Section -->
-        <section class="donation">
+        <footer class="donation">
             <p>If you found this website useful, any EVM donations are welcome at: <br><span>0x2b716DC60D561EEDC7e1849D3B3e4DdC4271dc52</span></p>
-        </section>
+        </footer>
     </div>
 </body>
 </html>
