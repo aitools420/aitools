@@ -2,6 +2,19 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            document.querySelector('.expansions-grid').addEventListener('click', function(e) {
+                const box = e.target.closest('.expansion-box');
+                if (box && !e.target.closest('a')) {
+                    const link = box.querySelector('a');
+                    if (link) {
+                        window.open(link.href, '_blank');
+                    }
+                }
+            });
+        });
+    </script>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="description" content="Roo Code - Setup guide for AI agent with VS Code + Roo Code extension, OpenRouter API and Browser-Use">
     <meta name="keywords" content="Roo Code, AI agent setup, VS Code extension, OpenRouter API, Browser-Use, AI tools">
@@ -12,14 +25,19 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Space+Mono:wght@400;700&family=Orbitron:wght@700&display=swap" rel="stylesheet" async>
     <style>
-        *,:after,:before{margin:0;padding:0;box-sizing:border-box}body{background:linear-gradient(135deg,#0a0a1f 0,#1c1c3b 100%);color:#fff;line-height:1.6;padding:40px;font-family:'Space Mono',monospace;position:relative;overflow-x:hidden}body:before{content:'';position:fixed;top:0;left:0;width:100%;height:100%;background:repeating-linear-gradient(0deg,transparent,transparent 2px,rgba(255,255,255,.05) 2px,rgba(255,255,255,.05) 4px);opacity:.1;z-index:-1}.container{max-width:1400px;margin:0 auto}header.mission{text-align:center;margin-bottom:60px;padding:30px;background:rgba(255,255,255,.05);border-radius:15px;border:1px solid rgba(255,255,255,.1);box-shadow:0 0 20px rgba(0,212,255,.3);backdrop-filter:blur(10px)}header.mission h1{font-family:'Orbitron',sans-serif;font-size:2.8em;color:#00d4ff;margin-bottom:20px;text-shadow:0 0 10px #00d4ff;animation:pulseGlow 2s ease-in-out infinite}header.mission p{font-size:1.2em;color:#ccc;max-width:800px;margin:0 auto}.guide-section{margin-bottom:60px}.guide-section h2{font-family:'Orbitron',sans-serif;font-size=2.4em;color:#00d4ff;margin-bottom:15px;text-shadow:0 0 10px #00d4ff;animation:pulseGlow 2s ease-in-out infinite}.guide-section .desc{font-size:1.2em;color:#ccc;margin-bottom:30px}.step{background:rgba(255,255,255,.05);padding:25px;border-radius:15px;border:1px solid rgba(255,255,255,.1);box-shadow:0 0 15px rgba=0,212,255,.5);backdrop-filter:blur(10px);margin-bottom:30px;border:1px solid #00d4ff}.step ol{padding-left:30px}.step li{margin-bottom:10px}.step h3{color:#00d4ff;font-family:'Orbitron',sans-serif;font-size:1.6em;margin-bottom:15px;text-shadow:0 0 5px #00d4ff}.step p{font-size:1.1em;color:#fff;margin-bottom:10px}.step pre{background:rgba(0,0,0,.3);padding:15px;border-radius:8px;overflow-x:auto;margin:15px 0}.step code{font-family:'Space Mono',monospace;color:#39ff14}.step a{color:#39ff14;text-decoration:none}.step a:hover{text-decoration:underline}.expansions-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:30px}.expansion-box{background:rgba(255,255,255,.05);padding:25px;border-radius:15px;border:1px solid rgba(255,255,255,.1);box-shadow:0 0 15px rgba(0,212,255,.5);backdrop-filter:blur(10px);transition:all .3s ease;text-align:center;border:1px solid #8a2be2;position:relative}.expansion-box:hover{transform:translateY(-5px);box-shadow:0 0 25px #8a2be2,0 0 40px #00d4ff}.expansion-box h3{color:#8a2be2;font-family:'Orbitron',sans-serif;font-size:1.6em;margin-bottom:10px;text-shadow:0 0 5px #8a2be2}.expansion-box p{font-size:1.1em;color:#fff;margin-bottom:5px}.expansion-box a{position:absolute;top:0;left:0;width:100%;height:100%;z-index:1;opacity:0}.expansion-box a:hover{text-decoration:none}footer.donation{text-align:center;margin-top:60px;padding:20px;background:rgba(255,255,255,.05);border-radius:15px;border:1px solid rgba(255,255,255,.1);box-shadow:0 0 20px rgba(0,212,255,.3)}footer.donation p{font-size:1.1em;color:#ccc}footer.donation span{color:#39ff14;word-break:break-all}@keyframes pulseGlow{0%{text-shadow:0 0 10px #00d4ff}50%{text-shadow:0 0 20px #00d4ff,0 0 30px #00d4ff}100%{text-shadow:0 0 10px #00d4ff}}@media (max-width:900px){.expansions-grid{grid-template-columns:repeat(2,1fr)}}@media (max-width:600px){.expansions-grid{grid-template-columns:1fr}header.mission h1{font-size:2em}.guide-section h2{font-size:1.8em}.step h3{font-size:1.4em}}
+        *,:after,:before{margin:0;padding:0;box-sizing:border-box}body{background:linear-gradient(135deg,#0a0a1f 0,#1c1c3b 100%);color:#fff;line-height:1.6;padding:40px;font-family:'Space Mono',monospace;position:relative;overflow-x:hidden}body:before{content:'';position:fixed;top:0;left:0;width:100%;height:100%;background:repeating-linear-gradient(0deg,transparent,transparent 2px,rgba(255,255,255,.05) 2px,rgba(255,255,255,.05) 4px);opacity:.1;z-index:-1}.container{max-width:1400px;margin:0 auto}header.mission{text-align:center;margin-bottom:60px;padding:30px;background:rgba(255,255,255,.05);border-radius:15px;border:1px solid rgba(255,255,255,.1);box-shadow:0 0 20px rgba(0,212,255,.3);backdrop-filter:blur(10px)}header.mission h1{font-family:'Orbitron',sans-serif;font-size:2.8em;color:#00d4ff;margin-bottom:20px;text-shadow:0 0 10px #00d4ff;animation:pulseGlow 2s ease-in-out infinite}header.mission p{font-size:1.2em;color:#ccc;max-width:800px;margin:0 auto}.guide-section{margin-bottom:60px}.guide-section h2{font-family:'Orbitron',sans-serif;font-size:2.4em;color:#00d4ff;margin-bottom:15px;text-shadow:0 0 10px #00d4ff;animation:pulseGlow 2s ease-in-out infinite}.guide-section .desc{font-size:1.2em;color:#ccc;margin-bottom:30px}.step{background:rgba(255,255,255,.05);padding:25px;border-radius:15px;border:1px solid rgba(255,255,255,.1);box-shadow:0 0 15px rgba(0,212,255,.5);backdrop-filter:blur(10px);margin-bottom:30px;border:1px solid #00d4ff}.step ol{padding-left:30px}.step li{margin-bottom:10px}.step h3{color:#00d4ff;font-family:'Orbitron',sans-serif;font-size:1.6em;margin-bottom:15px;text-shadow:0 0 5px #00d4ff}.step p{font-size:1.1em;color:#fff;margin-bottom:10px}.step pre{background:rgba(0,0,0,.3);padding:15px;border-radius:8px;overflow-x:auto;margin:15px 0}.step code{font-family:'Space Mono',monospace;color:#39ff14}.step a{color:#39ff14;text-decoration:none}.step a:hover{text-decoration:underline}.expansions-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:30px}.expansion-box{background:rgba(255,255,255,.05);padding:25px;border-radius:15px;border:1px solid rgba(255,255,255,.1);box-shadow:0 0 15px rgba(0,212,255,.5);backdrop-filter:blur(10px);transition:all .3s ease;text-align:center;border:1px solid #8a2be2}.expansion-box:hover{transform:translateY(-5px);box-shadow:0 0 25px #8a2be2,0 0 40px #00d4ff}.expansion-box h3{color:#8a2be2;font-family:'Orbitron',sans-serif;font-size:1.6em;margin-bottom:10px;text-shadow:0 0 5px #8a2be2}.expansion-box p{font-size:1.1em;color:#fff;margin-bottom:5px}.expansion-box a{color:#39ff14;text-decoration:none}.expansion-box a:hover{text-decoration:underline}footer.donation{text-align:center;margin-top:60px;padding:20px;background:rgba(255,255,255,.05);border-radius:15px;border:1px solid rgba(255,255,255,.1);box-shadow:0 0 20px rgba(0,212,255,.3)}footer.donation p{font-size:1.1em;color:#ccc}footer.donation span{color:#39ff14;word-break:break-all}@keyframes pulseGlow{0%{text-shadow:0 0 10px #00d4ff}50%{text-shadow:0 0 20px #00d4ff,0 0 30px #00d4ff}100%{text-shadow:0 0 10px #00d4ff}}@media (max-width:900px){.expansions-grid{grid-template-columns:repeat(2,1fr)}}@media (max-width:600px){.expansions-grid{grid-template-columns:1fr}header.mission h1{font-size:2em}.guide-section h2{font-size:1.8em}.step h3{font-size:1.4em}}
+    </style>
+    <style>
+        .expansion-box {
+            cursor: pointer;
+        }
     </style>
 </head>
 <body>
     <div class="container">
         <header class="mission">
             <h1>Roo Code AI Agent Setup</h1>
-            <p>Complete guide to setting up your AI development environment with VS Code + Roo Code extension, OpenRouter API, and Browser-Use for web browsing.</p>
+            <p>Complete guide to setting up your AI agent development environment with VS Code + Roo Code extension, OpenRouter API and Browser-Use.</p>
         </header>
 
         <section class="guide-section">
@@ -58,22 +76,29 @@
             </div>
 
             <div class="step">
-                <h3>Step 4: Self-Host Browser-Use</h3>
-                <p>Set up Browser-Use locally for web browsing capabilities:</p>
+                <h3>Step 4: Configure Browser-Use (Self-Hosted)</h3>
+                <p>Set up Browser-Use for web browsing capabilities by self-hosting:</p>
                 <ol>
                     <li>Clone the repository: <code>git clone https://github.com/browser-use/browser-use</code></li>
-                    <li>Install dependencies: <code>npm install</code></li>
-                    <li>Start the server: <code>npm start</code></li>
-                    <li>In Roo Code settings, configure the local Browser-Use endpoint (default: http://localhost:3000)</li>
+                    <li>Follow the setup instructions in the README.md</li>
+                    <li>In Roo Code settings, configure the local Browser-Use endpoint</li>
+                    <li>Test the connection by running a simple web search command</li>
                 </ol>
-                <p>Example configuration:</p>
-                <pre><code>// In Roo Code settings
-{
-  "browser": {
-    "provider": "browser-use",
-    "endpoint": "http://localhost:3000"
-  }
-}</code></pre>
+                <p>Example test command (after setup):</p>
+                <pre><code>// JavaScript example
+const response = await fetch('https://api.browser-use.com/v1/search', {
+    method: 'POST',
+    headers: {
+        'Authorization': 'Bearer YOUR_API_KEY',
+        'Content-Type': 'application/json'
+    },
+    body: JSON.stringify({
+        query: 'current AI news',
+        max_results: 3
+    })
+});
+const data = await response.json();
+console.log(data);</code></pre>
             </div>
 
             <div class="step">
@@ -113,45 +138,45 @@ testAgent();</code></pre>
 
             <div class="expansions-grid">
                 <div class="expansion-box">
-                    <a href="https://github.com/features/copilot" target="_blank" rel="noopener noreferrer"></a>
                     <h3>Code Generation</h3>
                     <p>GitHub Copilot</p>
                     <p>Best-in-class AI pair programmer</p>
+                    <p><a href="https://github.com/features/copilot" target="_blank">Get Copilot</a></p>
                 </div>
 
                 <div class="expansion-box">
-                    <a href="https://lmstudio.ai" target="_blank" rel="noopener noreferrer"></a>
                     <h3>Local LLMs</h3>
                     <p>LM Studio</p>
                     <p>Run models locally for privacy</p>
+                    <p><a href="https://lmstudio.ai" target="_blank">Get LM Studio</a></p>
                 </div>
 
                 <div class="expansion-box">
-                    <a href="https://n8n.io" target="_blank" rel="noopener noreferrer"></a>
                     <h3>Automation</h3>
                     <p>N8N</p>
                     <p>Open-source workflow automation</p>
+                    <p><a href="https://n8n.io" target="_blank">Get N8N</a></p>
                 </div>
 
                 <div class="expansion-box">
-                    <a href="https://pinecone.io" target="_blank" rel="noopener noreferrer"></a>
                     <h3>Vector Database</h3>
                     <p>Pinecone</p>
                     <p>For long-term memory</p>
+                    <p><a href="https://pinecone.io" target="_blank">Get Pinecone</a></p>
                 </div>
 
                 <div class="expansion-box">
-                    <a href="https://elevenlabs.io" target="_blank" rel="noopener noreferrer"></a>
                     <h3>Speech</h3>
                     <p>ElevenLabs</p>
                     <p>Text-to-speech capabilities</p>
+                    <p><a href="https://elevenlabs.io" target="_blank">Get ElevenLabs</a></p>
                 </div>
 
                 <div class="expansion-box">
-                    <a href="https://claude.ai" target="_blank" rel="noopener noreferrer"></a>
                     <h3>Vision</h3>
                     <p>Claude 3 Opus</p>
                     <p>Multimodal understanding</p>
+                    <p><a href="https://claude.ai" target="_blank">Get Claude</a></p>
                 </div>
             </div>
         </section>
