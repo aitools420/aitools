@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AI News - AITools.gg</title>
+    <link href="https://fonts.googleapis.com/css2?family=Orbitron&family=Space+Mono&display=swap" rel="stylesheet">
+    <style>
+        *,:after,:before{margin:0;padding:0;box-sizing:border-box}body{background:linear-gradient(135deg,#0a0a1f 0,#1c1c3b 100%);color:#fff;line-height:1.6;padding:40px;font-family:'Space Mono',monospace;position:relative;overflow-x:hidden}body:before{content:'';position:fixed;top:0;left:0;width:100%;height:100%;background:repeating-linear-gradient(0deg,transparent,transparent 2px,rgba(255,255,255,.05) 2px,rgba(255,255,255,.05) 4px);opacity:.1;z-index:-1}.container{max-width:1400px;margin:0 auto}header.mission{text-align:center;margin-bottom:60px;padding:30px;background:rgba(255,255,255,.05);border-radius:15px;border:1px solid rgba(255,255,255,.1);box-shadow:0 0 20px rgba(0,212,255,.3);backdrop-filter:blur(10px)}header.mission h1{font-family:'Orbitron',sans-serif;font-size:2.8em;color:#00d4ff;margin-bottom:20px;text-shadow:0 0 10px #00d4ff;animation:pulseGlow 2s ease-in-out infinite}header.mission p{font-size:1.2em;color:#ccc;max-width:800px;margin:0 auto}.guide-section{margin-bottom:60px}.guide-section h2{font-family:'Orbitron',sans-serif;font-size:2.4em;color:#00d4ff;margin-bottom:15px;text-shadow:0 0 10px #00d4ff;animation:pulseGlow 2s ease-in-out infinite}.guide-section .desc{font-size:1.2em;color:#ccc;margin-bottom:30px}.step{background:rgba(255,255,255,.05);padding:25px;border-radius:15px;border:1px solid rgba(255,255,255,.1);box-shadow:0 0 15px rgba(0,212,255,.5);backdrop-filter:blur(10px);margin-bottom:30px;border:1px solid #00d4ff}.step ol{padding-left:30px}.step li{margin-bottom:10px}.step h3{color:#00d4ff;font-family:'Orbitron',sans-serif;font-size:1.6em;margin-bottom:15px;text-shadow:0 0 5px #00d4ff}.step p{font-size:1.1em;color:#fff;margin-bottom:10px}.step pre{background:rgba(0,0,0,.3);padding:15px;border-radius:8px;overflow-x:auto;margin:15px 0}.step code{font-family:'Space Mono',monospace;color:#39ff14}.step a{color:#39ff14;text-decoration:none}.step a:hover{text-decoration:underline}.expansions-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:30px}.expansion-box{background:rgba(255,255,255,.05);padding:25px;border-radius:15px;border:1px solid rgba(255,255,255,.1);box-shadow:0 0 15px rgba(0,212,255,.5);backdrop-filter:blur(10px);transition:all .3s ease;text-align:center;border:1px solid #8a2be2}.expansion-box:hover{transform:translateY(-5px);box-shadow:0 0 25px #8a2be2,0 0 40px #00d4ff}.expansion-box h3{color:#8a2be2;font-family:'Orbitron',sans-serif;font-size:1.6em;margin-bottom:10px;text-shadow:0 0 5px #8a2be2}.expansion-box p{font-size:1.1em;color:#fff;margin-bottom:5px}.expansion-box a{color:#39ff14;text-decoration:none}.expansion-box a:hover{text-decoration:underline}footer.donation{text-align:center;margin-top:60px;padding:20px;background:rgba(255,255,255,.05);border-radius:15px;border:1px solid rgba(255,255,255,.1);box-shadow:0 0 20px rgba(0,212,255,.3)}footer.donation p{font-size:1.1em;color:#ccc}footer.donation span{color:#39ff14;word-break:break-all}@keyframes pulseGlow{0%{text-shadow:0 0 10px #00d4ff}50%{text-shadow:0 0 20px #00d4ff,0 0 30px #00d4ff}100%{text-shadow:0 0 10px #00d4ff}}@media (max-width:900px){.expansions-grid{grid-template-columns:repeat(2,1fr)}}@media (max-width:600px){.expansions-grid{grid-template-columns:1fr}header.mission h1{font-size:2em}.guide-section h2{font-size:1.8em}.step h3{font-size:1.4em}}
+    </style>
+</head>
+<body>
+    <div class="container">
+        <header class="mission">
+            <h1>AI News</h1>
+            <p>Your source for the latest AI insights and updates from <a href="https://machinelearningmastery.com" target="_blank" style="color:#39ff14">Machine Learning Mastery</a>, curated by AITools.gg.</p>
+        </header>
+
+        <section class="guide-section">
+            <h2>Latest AI News</h2>
+            <div class="expansions-grid">
+                <?php
+                // Set User-Agent for better compatibility with online servers
+                ini_set('user_agent', 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/91.0.4472.124 Safari/537.36');
+
+                // Fetch and parse the RSS feed
+                $rss_url = 'https://machinelearningmastery.com/blog/feed';
+                $rss = @simplexml_load_file($rss_url); // Suppress warnings if fetch fails
+
+                if ($rss === false) {
+                    echo "<div class='step'><p>Unable to load AI news feed at this time. Please check back later.</p></div>";
+                } else {
+                    $items = $rss->channel->item;
+                    $count = 0;
+
+                    if (empty($items)) {
+                        echo "<div class='step'><p>No recent AI news available.</p></div>";
+                    } else {
+                        foreach ($items as $item) {
+                            if ($count >= 9) break; // Limit to 9 items for 3x3 grid
+                            $title = htmlspecialchars($item->title);
+                            $link = htmlspecialchars($item->link);
+                            $description = strip_tags($item->description);
+                            $pubDate = date('F j, Y', strtotime($item->pubDate));
+
+                            // Truncate description
+                            $max_length = 100;
+                            if (strlen($description) > $max_length) {
+                                $description = substr($description, 0, $max_length) . '...';
+                            }
+
+                            echo "
+                            <div class='expansion-box'>
+                                <h3>$title</h3>
+                                <p>$description</p>
+                                <p>Published: $pubDate</p>
+                                <a href='$link' target='_blank'>Read More</a>
+                            </div>
+                            ";
+                            $count++;
+                        }
+                    }
+                }
+                ?>
+            </div>
+        </section>
+
+        <footer class="donation">
+            <p>Powered by <span><a href="https://machinelearningmastery.com" target="_blank" style="color:#39ff14">Machine Learning Mastery</a></span> | Curated by <span><a href="https://aitools.gg" style="color:#39ff14">AITools.gg</a></span></p>
+        </footer>
+    </div>
+</body>
+</html>
