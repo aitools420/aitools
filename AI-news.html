@@ -3,22 +3,170 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="AI News Feed from Machine Learning Mastery">
-    <meta name="keywords" content="AI, Machine Learning, News, RSS Feed">
+    <meta name="description" content="AI News Feed from Marktechpost">
+    <meta name="keywords" content="AI, Marktechpost, News, RSS Feed">
     <meta name="author" content="AI Tools Team">
-    <title>AI News - Machine Learning Mastery</title>
+    <title>AI News - Marktechpost</title>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Space+Mono:wght@400;700&family=Orbitron:wght@700&display=swap" rel="stylesheet" async>
     <style>
-        *,:after,:before{margin:0;padding:0;box-sizing:border-box}body{background:linear-gradient(135deg,#0a0a1f 0,#1c1c3b 100%);color:#fff;line-height:1.6;padding:40px;font-family:'Space Mono',monospace;position:relative;overflow-x:hidden}body:before{content:'';position:fixed;top:0;left:0;width:100%;height:100%;background:repeating-linear-gradient(0deg,transparent,transparent 2px,rgba(255,255,255,.05) 2px,rgba(255,255,255,.05) 4px);opacity:.1;z-index:-1}.container{max-width:1400px;margin:0 auto}header.mission{text-align:center;margin-bottom:60px;padding:30px;background:rgba(255,255,255,.05);border-radius:15px;border:1px solid rgba(255,255,255,.1);box-shadow:0 0 20px rgba(0,212,255,.3);backdrop-filter:blur(10px)}header.mission h1{font-family:'Orbitron',sans-serif;font-size:2.8em;color:#00d4ff;margin-bottom:20px;text-shadow:0 0 10px #00d4ff;animation:pulseGlow 2s ease-in-out infinite}header.mission p{font-size:1.2em;color:#ccc;max-width:800px;margin:0 auto}.news-section{margin-bottom:60px}.news-section h2{font-family:'Orbitron',sans-serif;font-size:2.4em;color:#00d4ff;margin-bottom:15px;text-shadow:0 0 10px #00d4ff;animation:pulseGlow 2s ease-in-out infinite}.news-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:30px}.news-item{background:rgba(255,255,255,.05);padding:25px;border-radius:15px;border:1px solid rgba(255,255,255,.1);box-shadow:0 0 15px rgba(0,212,255,.5);backdrop-filter:blur(10px);transition:all .3s ease;border:1px solid #8a2be2}.news-item:hover{transform:translateY(-5px);box-shadow:0 0 25px #8a2be2,0 0 40px #00d4ff}.news-item h3{color:#8a2be2;font-family:'Orbitron',sans-serif;font-size:1.6em;margin-bottom:10px;text-shadow:0 0 5px #8a2be2}.news-item p{font-size:1.1em;color:#fff;margin-bottom:15px}.news-item .date{font-size:0.9em;color:#ccc;margin-bottom:15px}.news-item a{color:#39ff14;text-decoration:none}.news-item a:hover{text-decoration:underline}footer.donation{text-align:center;margin-top:60px;padding:20px;background:rgba(255,255,255,.05);border-radius:15px;border:1px solid rgba(255,255,255,.1);box-shadow:0 0 20px rgba(0,212,255,.3)}footer.donation p{font-size:1.1em;color:#ccc}@keyframes pulseGlow{0%{text-shadow:0 0 10px #00d4ff}50%{text-shadow:0 0 20px #00d4ff,0 0 30px #00d4ff}100%{text-shadow:0 0 10px #00d4ff}}@media (max-width:900px){.news-grid{grid-template-columns:repeat(2,1fr)}}@media (max-width:600px){.news-grid{grid-template-columns:1fr}header.mission h1{font-size:2em}.news-section h2{font-size:1.8em}}
+        *, :after, :before {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        body {
+            background: linear-gradient(135deg, #0a0a1f 0, #1c1c3b 100%);
+            color: #fff;
+            line-height: 1.6;
+            padding: 40px;
+            font-family: 'Space Mono', monospace;
+            position: relative;
+            overflow-x: hidden;
+        }
+        
+        body:before {
+            content: '';
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: repeating-linear-gradient(0deg, transparent, transparent 2px, rgba(255,255,255,.05) 2px, rgba(255,255,255,.05) 4px);
+            opacity: .1;
+            z-index: -1;
+        }
+        
+        .container {
+            max-width: 1400px;
+            margin: 0 auto;
+        }
+        
+        header.mission {
+            text-align: center;
+            margin-bottom: 60px;
+            padding: 30px;
+            background: rgba(255,255,255,.05);
+            border-radius: 15px;
+            border: 1px solid rgba(255,255,255,.1);
+            box-shadow: 0 0 20px rgba(0,212,255,.3);
+            backdrop-filter: blur(10px);
+        }
+        
+        header.mission h1 {
+            font-family: 'Orbitron', sans-serif;
+            font-size: 2.8em;
+            color: #00d4ff;
+            margin-bottom: 20px;
+            text-shadow: 0 0 10px #00d4ff;
+            animation: pulseGlow 2s ease-in-out infinite;
+        }
+        
+        header.mission p {
+            font-size: 1.2em;
+            color: #ccc;
+            max-width: 800px;
+            margin: 0 auto;
+        }
+        
+        .news-section {
+            margin-bottom: 60px;
+        }
+        
+        .news-section h2 {
+            font-family: 'Orbitron', sans-serif;
+            font-size: 2.4em;
+            color: #00d4ff;
+            margin-bottom: 15px;
+            text-shadow: 0 0 10px #00d4ff;
+            animation: pulseGlow 2s ease-in-out infinite;
+        }
+        
+        .news-grid {
+            display: grid;
+            grid-template-columns: 1fr;
+            gap: 30px;
+        }
+        
+        .news-item {
+            background: rgba(255,255,255,.05);
+            padding: 25px;
+            border-radius: 15px;
+            border: 1px solid rgba(255,255,255,.1);
+            box-shadow: 0 0 15px rgba(0,212,255,.5);
+            backdrop-filter: blur(10px);
+            transition: all .3s ease;
+            border: 1px solid #0077ff;
+        }
+        
+        .news-item:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 0 25px #0077ff, 0 0 40px #00d4ff;
+        }
+        
+        .news-item h3 {
+            color: #0077ff;
+            font-family: 'Orbitron', sans-serif;
+            font-size: 1.6em;
+            margin-bottom: 10px;
+            text-shadow: 0 0 5px #0077ff;
+        }
+        
+        .news-item p {
+            font-size: 1.1em;
+            color: #fff;
+            margin-bottom: 15px;
+        }
+        
+        .news-item .date {
+            font-size: 0.9em;
+            color: #ccc;
+            margin-bottom: 15px;
+        }
+        
+        .news-item a {
+            color: #39ff14;
+            text-decoration: none;
+        }
+        
+        .news-item a:hover {
+            text-decoration: underline;
+        }
+        
+        footer.donation {
+            text-align: center;
+            margin-top: 60px;
+            padding: 20px;
+            background: rgba(255,255,255,.05);
+            border-radius: 15px;
+            border: 1px solid rgba(255,255,255,.1);
+            box-shadow: 0 0 20px rgba(0,212,255,.3);
+        }
+        
+        footer.donation p {
+            font-size: 1.1em;
+            color: #ccc;
+        }
+        
+        @keyframes pulseGlow {
+            0% { text-shadow: 0 0 10px #00d4ff }
+            50% { text-shadow: 0 0 20px #00d4ff, 0 0 30px #00d4ff }
+            100% { text-shadow: 0 0 10px #00d4ff }
+        }
+        
+        @media (max-width: 600px) {
+            header.mission h1 { font-size: 2em }
+            .news-section h2 { font-size: 1.8em }
+        }
     </style>
 </head>
 <body>
     <div class="container">
         <header class="mission">
             <h1>AI News Feed</h1>
-            <p>Latest articles from Machine Learning Mastery</p>
+            <p>Latest AI news and articles</p>
         </header>
 
         <section class="news-section">
@@ -33,13 +181,13 @@
         </section>
 
         <footer class="donation">
-            <p>Powered by Machine Learning Mastery RSS Feed</p>
+            <p>AI News Aggregation Service</p>
         </footer>
     </div>
 
     <script>
         document.addEventListener('DOMContentLoaded', function() {
-            fetch('https://api.rss2json.com/v1/api.json?rss_url=http://machinelearningmastery.com/blog/feed')
+            fetch('https://api.rss2json.com/v1/api.json?rss_url=https://www.marktechpost.com/feed/')
                 .then(response => response.json())
                 .then(data => {
                     const container = document.getElementById('news-container');
@@ -57,7 +205,12 @@
                         date.textContent = new Date(item.pubDate).toLocaleDateString();
                         
                         const description = document.createElement('p');
-                        description.textContent = item.description.replace(/<[^>]*>/g, '').substring(0, 200) + '...';
+                        // Get first sentence or first 100 chars of description
+                        const cleanDesc = item.description.replace(/<[^>]*>/g, '');
+                        const firstSentence = cleanDesc.split('.')[0];
+                        description.textContent = firstSentence.length > 100
+                            ? firstSentence.substring(0, 100) + '...'
+                            : firstSentence;
                         
                         const link = document.createElement('a');
                         link.href = item.link;
