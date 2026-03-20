@@ -20,7 +20,7 @@
 
         <header class="mission">
             <h1>AI News Feed</h1>
-            <p>Latest AI news and articles from across the web</p>
+            <p>Latest AI agent news and agentic AI developments</p>
         </header>
 
         <section class="news-section">
@@ -49,6 +49,56 @@
 
         var API_BASE = 'https://api.rss2json.com/v1/api.json?rss_url=';
 
+        // Keywords that indicate an article is about AI agents / agentic AI
+        var AGENT_KEYWORDS = [
+            // Core agent terms
+            'agent', 'agentic', 'autonomous', 'multi-agent', 'multiagent',
+            'ai agent', 'ai assistant', 'virtual assistant', 'copilot',
+            // Frameworks & tools
+            'langchain', 'langgraph', 'crewai', 'autogen', 'autogpt', 'auto-gpt',
+            'babyagi', 'metagpt', 'camel-ai', 'superagi', 'agentgpt',
+            'semantic kernel', 'haystack', 'llamaindex', 'llama-index',
+            'opendevin', 'openhands', 'swe-agent', 'swe-bench',
+            'phidata', 'composio', 'e2b', 'toolhouse',
+            'claude code', 'cursor', 'windsurf', 'cline', 'roo code',
+            'devin', 'cognition', 'factory ai', 'codegen',
+            // Protocols & standards
+            'mcp', 'model context protocol', 'function calling', 'tool use',
+            'tool calling', 'json mode', 'structured output',
+            'a2a', 'agent-to-agent', 'agent protocol', 'agent card',
+            // Concepts & architecture
+            'orchestration', 'workflow', 'pipeline', 'planner', 'planning',
+            'chain of thought', 'chain-of-thought', 'cot', 'reasoning',
+            'react pattern', 'react agent', 'reflection', 'self-correct',
+            'retrieval augmented', 'rag', 'memory system', 'vector store',
+            'embeddings', 'tool augmented', 'grounding',
+            'swarm', 'swarm intelligence', 'task decomposition',
+            'human-in-the-loop', 'human in the loop', 'hitl',
+            'scaffold', 'scaffolding', 'prompt chaining',
+            // Capabilities
+            'web browsing', 'code execution', 'code interpreter',
+            'computer use', 'screen control', 'browser agent',
+            'coding agent', 'coding assistant', 'code agent',
+            'research agent', 'data agent', 'sales agent',
+            'customer support agent', 'support agent',
+            // Industry terms
+            'robotic process', 'rpa', 'digital worker', 'digital employee',
+            'ai workforce', 'ai worker', 'task automation',
+            'no-code agent', 'low-code agent', 'agent builder',
+            'agent platform', 'agent marketplace', 'agent store',
+            // Safety & evaluation
+            'agent safety', 'agent alignment', 'agent eval',
+            'agent benchmark', 'red teaming agent', 'guardrail'
+        ];
+
+        function isAgentRelated(item) {
+            var text = ((item.title || '') + ' ' + (item.description || '')).toLowerCase();
+            for (var i = 0; i < AGENT_KEYWORDS.length; i++) {
+                if (text.indexOf(AGENT_KEYWORDS[i]) !== -1) return true;
+            }
+            return false;
+        }
+
         function fetchFeed(url) {
             return fetch(API_BASE + encodeURIComponent(url))
                 .then(function(r) { return r.json(); })
@@ -64,6 +114,47 @@
                 .catch(function() { return []; });
         }
 
+        function renderArticles(container, items, heading) {
+            if (heading) {
+                var h = document.createElement('h3');
+                h.textContent = heading;
+                h.style.cssText = 'color: #888; font-size: 0.7rem; text-transform: uppercase; letter-spacing: 2px; margin: 30px 0 15px; padding-bottom: 8px; border-bottom: 1px solid #333;';
+                container.appendChild(h);
+            }
+            items.forEach(function(item) {
+                var newsItem = document.createElement('div');
+                newsItem.className = 'news-item';
+
+                var title = document.createElement('h3');
+                title.textContent = item.title;
+
+                var meta = document.createElement('p');
+                meta.className = 'date';
+                var dateStr = new Date(item.pubDate).toLocaleDateString();
+                meta.textContent = item._source ? dateStr + ' · ' + item._source : dateStr;
+
+                var description = document.createElement('p');
+                var cleanDesc = item.description.replace(/<[^>]*>/g, '');
+                var firstSentence = cleanDesc.split('.')[0];
+                description.textContent = firstSentence.length > 150
+                    ? firstSentence.substring(0, 150) + '...'
+                    : firstSentence + '.';
+
+                var link = document.createElement('a');
+                link.href = item.link;
+                link.textContent = 'Read more';
+                link.target = '_blank';
+                link.rel = 'noopener noreferrer';
+
+                newsItem.appendChild(title);
+                newsItem.appendChild(meta);
+                newsItem.appendChild(description);
+                newsItem.appendChild(link);
+
+                container.appendChild(newsItem);
+            });
+        }
+
         document.addEventListener('DOMContentLoaded', function() {
             Promise.all(RSS_FEEDS.map(fetchFeed))
                 .then(function(results) {
@@ -77,13 +168,21 @@
                         return new Date(b.pubDate) - new Date(a.pubDate);
                     });
 
-                    // Limit to 30 articles
-                    allItems = allItems.slice(0, 30);
+                    // Split into agent-related and general
+                    var agentItems = [];
+                    var generalItems = [];
+                    allItems.forEach(function(item) {
+                        if (isAgentRelated(item)) {
+                            agentItems.push(item);
+                        } else {
+                            generalItems.push(item);
+                        }
+                    });
 
                     var container = document.getElementById('news-container');
                     container.innerHTML = '';
 
-                    if (allItems.length === 0) {
+                    if (agentItems.length === 0 && generalItems.length === 0) {
                         container.innerHTML =
                             '<div class="news-item">' +
                             '<h3>No Articles Found</h3>' +
@@ -92,38 +191,15 @@
                         return;
                     }
 
-                    allItems.forEach(function(item) {
-                        var newsItem = document.createElement('div');
-                        newsItem.className = 'news-item';
+                    // Always show agent articles first
+                    if (agentItems.length > 0) {
+                        renderArticles(container, agentItems.slice(0, 20), null);
+                    }
 
-                        var title = document.createElement('h3');
-                        title.textContent = item.title;
-
-                        var meta = document.createElement('p');
-                        meta.className = 'date';
-                        var dateStr = new Date(item.pubDate).toLocaleDateString();
-                        meta.textContent = item._source ? dateStr + ' · ' + item._source : dateStr;
-
-                        var description = document.createElement('p');
-                        var cleanDesc = item.description.replace(/<[^>]*>/g, '');
-                        var firstSentence = cleanDesc.split('.')[0];
-                        description.textContent = firstSentence.length > 150
-                            ? firstSentence.substring(0, 150) + '...'
-                            : firstSentence + '.';
-
-                        var link = document.createElement('a');
-                        link.href = item.link;
-                        link.textContent = 'Read more';
-                        link.target = '_blank';
-                        link.rel = 'noopener noreferrer';
-
-                        newsItem.appendChild(title);
-                        newsItem.appendChild(meta);
-                        newsItem.appendChild(description);
-                        newsItem.appendChild(link);
-
-                        container.appendChild(newsItem);
-                    });
+                    // If fewer than 3 agent articles, show general AI as fallback
+                    if (agentItems.length < 3 && generalItems.length > 0) {
+                        renderArticles(container, generalItems.slice(0, 15), 'More AI News');
+                    }
                 })
                 .catch(function() {
                     document.getElementById('news-container').innerHTML =
