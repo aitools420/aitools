@@ -74,9 +74,10 @@ nav .nav-accent:visited {
     text-shadow: 0 0 5px #8a2be2;
 }
 
-nav .nav-crypto,
-nav .nav-crypto:visited {
-    color: #FFD700;
+nav a.nav-crypto,
+nav a.nav-crypto:visited,
+nav a.nav-crypto:link {
+    color: #FFD700 !important;
     text-shadow: 0 0 5px #FFD700;
 }
 
