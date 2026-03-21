@@ -68,12 +68,14 @@ nav a {
 
 nav a:hover { color: #39ff14; }
 
-nav .nav-accent {
+nav .nav-accent,
+nav .nav-accent:visited {
     color: #8a2be2;
     text-shadow: 0 0 5px #8a2be2;
 }
 
-nav .nav-crypto {
+nav .nav-crypto,
+nav .nav-crypto:visited {
     color: #FFD700;
     text-shadow: 0 0 5px #FFD700;
 }
