@@ -73,6 +73,11 @@ nav .nav-accent {
     text-shadow: 0 0 5px #8a2be2;
 }
 
+nav .nav-crypto {
+    color: #FFD700;
+    text-shadow: 0 0 5px #FFD700;
+}
+
 nav .nav-cta {
     color: #39ff14;
     text-shadow: 0 0 5px #39ff14;

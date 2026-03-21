@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="description" content="Best tools for AI agents to interact with crypto — trading, DeFi, wallets, on-chain data, and agent frameworks.">
-    <meta name="keywords" content="crypto AI agents, DeFi agents, blockchain AI, trading bots, on-chain agents, GOAT, Eliza, AgentKit">
+    <meta name="keywords" content="crypto AI agents, DeFi agents, blockchain AI, trading bots, on-chain agents, MEV protection, GOAT, Eliza, AgentKit">
     <meta name="author" content="Green Wick AI">
     <meta name="robots" content="index, follow">
     <meta property="og:title" content="Crypto x Agents — Best Tools for AI Agents in Crypto">
@@ -32,6 +32,8 @@
             <a href="#wallets-transactions">Wallets & Txns</a>
             <a href="#market-data">Market Data</a>
             <a href="#trading">Trading</a>
+            <a href="#mev-tools">MEV</a>
+            <a href="#bridging">Bridging</a>
             <a href="#on-chain-analytics">Analytics</a>
         </nav>
 
@@ -96,8 +98,8 @@
                 <div class="tool-box">
                     <a href="https://viem.sh" target="_blank" rel="noopener noreferrer">
                         <p class="category-label">Developer Pick</p>
-                        <h3>Viem + Ethers.js</h3>
-                        <p>Low-level TypeScript libraries for EVM interaction. Send transactions, read contracts, encode calldata — full control.</p>
+                        <h3>Viem</h3>
+                        <p>Modern TypeScript library for EVM interaction. Send transactions, read contracts, encode calldata — fast, type-safe, minimal.</p>
                         <p class="payment">Free / Open Source</p>
                         <p class="location">Both</p>
                     </a>
@@ -129,10 +131,10 @@
                     </a>
                 </div>
                 <div class="tool-box">
-                    <a href="https://birdeye.so" target="_blank" rel="noopener noreferrer">
-                        <p class="category-label">Solana Specialist</p>
-                        <h3>Birdeye</h3>
-                        <p>Deep Solana and multi-chain DEX analytics. Token discovery, OHLCV data, wallet tracking, and trader analytics API.</p>
+                    <a href="https://www.defined.fi" target="_blank" rel="noopener noreferrer">
+                        <p class="category-label">Best EVM Analytics</p>
+                        <h3>Defined.fi</h3>
+                        <p>Real-time token prices, pair analytics, and wallet tracking across 48+ EVM chains via GraphQL API. New pair detection and volume data.</p>
                         <p class="payment">Freemium</p>
                         <p class="location">Cloud</p>
                     </a>
@@ -164,11 +166,81 @@
                     </a>
                 </div>
                 <div class="tool-box">
-                    <a href="https://www.jupag.com" target="_blank" rel="noopener noreferrer">
+                    <a href="https://docs.cow.fi" target="_blank" rel="noopener noreferrer">
                         <p class="category-label">Best DEX Aggregator</p>
-                        <h3>Jupiter</h3>
-                        <p>Solana's top swap aggregator with a powerful API. Best-price routing, limit orders, and DCA — agent-friendly endpoints.</p>
+                        <h3>CowSwap</h3>
+                        <p>Intent-based swap protocol with batch auctions. Solvers compete for best execution — MEV protection by design. Python SDK for programmatic orders.</p>
                         <p class="payment">Free</p>
+                        <p class="location">Cloud</p>
+                    </a>
+                </div>
+            </div>
+        </section>
+
+        <!-- MEV Tools -->
+        <section class="category" id="mev-tools">
+            <h2>MEV Tools</h2>
+            <p class="desc">Protect your agent from sandwich attacks — or extract value from arbitrage and liquidation opportunities.</p>
+            <div class="tools-grid">
+                <div class="tool-box">
+                    <a href="https://docs.flashbots.net/flashbots-protect/overview" target="_blank" rel="noopener noreferrer">
+                        <p class="category-label">Best Protection</p>
+                        <h3>Flashbots Protect</h3>
+                        <p>Free private RPC endpoint. Transactions skip the public mempool, blocking sandwich and frontrun attacks. Failed txns cost zero gas. Up to 90% MEV refunds.</p>
+                        <p class="payment">Free</p>
+                        <p class="location">Cloud</p>
+                    </a>
+                </div>
+                <div class="tool-box">
+                    <a href="https://mevblocker.io" target="_blank" rel="noopener noreferrer">
+                        <p class="category-label">Most Configurable</p>
+                        <h3>MEV Blocker</h3>
+                        <p>RPC with 5 endpoint variants — /fast, /noreverts, /fullprivacy, /maxbackruns. Orderflow auction rebates 90% of MEV back to users.</p>
+                        <p class="payment">Free</p>
+                        <p class="location">Cloud</p>
+                    </a>
+                </div>
+                <div class="tool-box">
+                    <a href="https://docs.flashbots.net/flashbots-mev-share/introduction" target="_blank" rel="noopener noreferrer">
+                        <p class="category-label">For Searchers</p>
+                        <h3>Flashbots MEV-Share</h3>
+                        <p>Submit backrun bundles against the MEV-Share event stream. Arbitrage and liquidation execution — sandwich attacks architecturally blocked.</p>
+                        <p class="payment">Free</p>
+                        <p class="location">Cloud</p>
+                    </a>
+                </div>
+            </div>
+        </section>
+
+        <!-- Cross-Chain Bridging -->
+        <section class="category" id="bridging">
+            <h2>Cross-Chain Bridging</h2>
+            <p class="desc">Move assets between chains programmatically — bridge aggregation so your agent doesn't have to solve routing.</p>
+            <div class="tools-grid">
+                <div class="tool-box">
+                    <a href="https://li.fi/api-sdk/" target="_blank" rel="noopener noreferrer">
+                        <p class="category-label">Best in Class</p>
+                        <h3>LI.FI</h3>
+                        <p>Bridge and DEX aggregator across 60+ chains via 18+ bridges. Single API call finds optimal any-to-any route. TypeScript SDK included.</p>
+                        <p class="payment">Freemium</p>
+                        <p class="location">Cloud</p>
+                    </a>
+                </div>
+                <div class="tool-box">
+                    <a href="https://tenderly.co/transaction-simulator" target="_blank" rel="noopener noreferrer">
+                        <p class="category-label">Essential Companion</p>
+                        <h3>Tenderly</h3>
+                        <p>Simulate any transaction before sending. Decoded traces, exact gas, balance changes. Web3 Actions for serverless on-chain event triggers.</p>
+                        <p class="payment">Freemium</p>
+                        <p class="location">Cloud</p>
+                    </a>
+                </div>
+                <div class="tool-box">
+                    <a href="https://docs.blocknative.com/gas-prediction/gas-platform" target="_blank" rel="noopener noreferrer">
+                        <p class="category-label">Best Gas Prediction</p>
+                        <h3>Blocknative</h3>
+                        <p>ML-based gas prediction from real-time mempool data — predicts the next block, not last block. Mempool explorer for pending transaction visibility.</p>
+                        <p class="payment">Freemium</p>
                         <p class="location">Cloud</p>
                     </a>
                 </div>
