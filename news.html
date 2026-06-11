@@ -163,6 +163,12 @@
                 newsItem.appendChild(description);
                 newsItem.appendChild(link);
 
+                newsItem.style.cursor = 'pointer';
+                newsItem.addEventListener('click', function(e) {
+                    if (e.target.closest('a')) return;
+                    window.open(item.link, '_blank', 'noopener,noreferrer');
+                });
+
                 container.appendChild(newsItem);
             });
         }
